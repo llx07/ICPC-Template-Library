@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.9)  13 SEP 2024 15:46
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.9)  13 SEP 2024 16:52
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -709,14 +709,7 @@ ll[]].[]pb[]([]x[]),[]hav[][]++[];|
 
 
 (./_minted-main/4AAD15EE58E124160ED51EBB99CD87C1D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex))
-Overfull \vbox (4.05511pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (12.4519pt too high) has occurred while \output is active []
-
-
-[3] [4] (./main.aux)
+A.pygtex)) [3] [4] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/07/14>
@@ -727,7 +720,7 @@ runsystem(del main.pyg)...executed.
 Here is how much of TeX's memory you used:
  13098 strings out of 474773
  339106 string characters out of 5755060
- 2038842 words of memory out of 5000000
+ 1979842 words of memory out of 5000000
  35014 multiletter control sequences out of 15000+600000
  562751 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{tarjan}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{u}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{n}{dfn}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=}\PYG{n}{low}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=++}\PYG{n}{Time}\PYG{p}{,}\PYG{n}{sta}\PYG{p}{[}\PYG{o}{++}\PYG{n}{tp}\PYG{p}{]}\PYG{o}{=}\PYG{n}{u}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{v}\PYG{o}{:}\PYG{n}{G}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{k}{if}\PYG{p}{(}\PYG{o}{!}\PYG{n}{dfn}\PYG{p}{[}\PYG{n}{v}\PYG{p}{])}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n}{tarjan}\PYG{p}{(}\PYG{n}{v}\PYG{p}{),}\PYG{n}{low}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=}\PYG{n}{min}\PYG{p}{(}\PYG{n}{low}\PYG{p}{[}\PYG{n}{u}\PYG{p}{],}\PYG{n}{low}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]);}
+\PYG{+w}{			}\PYG{k}{if}\PYG{p}{(}\PYG{n}{low}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]}\PYG{o}{==}\PYG{n}{dfn}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])}
+\PYG{+w}{			}\PYG{p}{\PYGZob{}}
+\PYG{+w}{				}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{hav}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{o}{++}\PYG{n}{All}\PYG{p}{;}
+\PYG{+w}{				}\PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{x}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{x}\PYG{o}{!=}\PYG{n}{v}\PYG{p}{;}\PYG{n}{tp}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{x}\PYG{o}{=}\PYG{n}{sta}\PYG{p}{[}\PYG{n}{tp}\PYG{p}{],}\PYG{n}{T}\PYG{p}{[}\PYG{n}{x}\PYG{p}{].}\PYG{n}{pb}\PYG{p}{(}\PYG{n}{All}\PYG{p}{),}\PYG{n}{T}\PYG{p}{[}\PYG{n}{All}\PYG{p}{].}\PYG{n}{pb}\PYG{p}{(}\PYG{n}{x}\PYG{p}{),}\PYG{n}{hav}\PYG{o}{++}\PYG{p}{;}
+\PYG{+w}{				}\PYG{n}{T}\PYG{p}{[}\PYG{n}{u}\PYG{p}{].}\PYG{n}{pb}\PYG{p}{(}\PYG{n}{All}\PYG{p}{),}\PYG{n}{T}\PYG{p}{[}\PYG{n}{All}\PYG{p}{].}\PYG{n}{pb}\PYG{p}{(}\PYG{n}{u}\PYG{p}{),;}
+\PYG{+w}{				}\PYG{n}{siz}\PYG{p}{[}\PYG{n}{All}\PYG{p}{]}\PYG{o}{=++}\PYG{n}{hav}\PYG{p}{;}
+\PYG{+w}{			}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}\PYG{k}{else}\PYG{+w}{ }\PYG{n}{low}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=}\PYG{n}{min}\PYG{p}{(}\PYG{n}{low}\PYG{p}{[}\PYG{n}{u}\PYG{p}{],}\PYG{n}{dfn}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]);}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

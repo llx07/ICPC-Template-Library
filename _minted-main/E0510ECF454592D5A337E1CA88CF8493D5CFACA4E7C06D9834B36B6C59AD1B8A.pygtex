@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{tarjan}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{n}{dfn}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{o}{=}\PYG{n}{low}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{o}{=++}\PYG{n}{Time}\PYG{p}{,}\PYG{n}{sta}\PYG{p}{[}\PYG{o}{++}\PYG{n}{tp}\PYG{p}{]}\PYG{o}{=}\PYG{n}{x}\PYG{p}{,}\PYG{n}{ins}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{o}{=}\PYG{n+nb}{true}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{o}{=}\PYG{n}{hea}\PYG{p}{[}\PYG{n}{x}\PYG{p}{];}\PYG{n}{i}\PYG{p}{;}\PYG{n}{i}\PYG{o}{=}\PYG{n}{nex}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{k}{if}\PYG{p}{(}\PYG{o}{!}\PYG{n}{dfn}\PYG{p}{[}\PYG{n}{ver}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]])}\PYG{+w}{ }\PYG{n}{tarjan}\PYG{p}{(}\PYG{n}{ver}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]),}\PYG{n}{low}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{o}{=}\PYG{n}{min}\PYG{p}{(}\PYG{n}{low}\PYG{p}{[}\PYG{n}{x}\PYG{p}{],}\PYG{n}{low}\PYG{p}{[}\PYG{n}{ver}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]]);}
+\PYG{+w}{		}\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{n}{ins}\PYG{p}{[}\PYG{n}{ver}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]])}\PYG{+w}{ }\PYG{n}{low}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{o}{=}\PYG{n}{min}\PYG{p}{(}\PYG{n}{low}\PYG{p}{[}\PYG{n}{x}\PYG{p}{],}\PYG{n}{dfn}\PYG{p}{[}\PYG{n}{ver}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]]);}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{	}\PYG{k}{if}\PYG{p}{(}\PYG{n}{dfn}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{o}{==}\PYG{n}{low}\PYG{p}{[}\PYG{n}{x}\PYG{p}{])}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{k}{do}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n}{x}\PYG{o}{=}\PYG{n}{sta}\PYG{p}{[}\PYG{n}{tp}\PYG{p}{],}\PYG{n}{tp}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{,}\PYG{n}{ins}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{o}{=}\PYG{n+nb}{false}\PYG{p}{;}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{dfn}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{o}{!=}\PYG{n}{low}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]);}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

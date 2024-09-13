@@ -1,0 +1,63 @@
+\documentclass[12pt, a4paper, oneside]{ctexart}
+\usepackage{minted, multicol, geometry, graphicx, fancyvrb}
+\usepackage{relsize, setspace, enumitem, float}
+
+\geometry{a4paper, scale = 0.85}
+
+\setenumerate[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=0pt}
+\setitemize[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=0pt}
+\setdescription{itemsep=0pt,pa
+rtopsep=0pt,parsep=\parskip,topsep=0pt}
+\setlength{\parindent}{0pt}
+
+\setminted[cpp]{
+	style=xcode,
+	mathescape,
+	linenos,
+	autogobble,
+	baselinestretch=1,
+	tabsize=3,
+	fontsize=\scriptsize,
+	%bgcolor=Gray,
+	frame=single,
+	framesep=1mm,
+	framerule=0.3pt,
+	numbersep=1mm,
+	breaklines=true,
+	breaksymbolsepleft=2pt,
+	%breaksymbolleft=\raisebox{0.8ex}{ \small\reflectbox{\carriagereturn}}, %not moe!
+	%breaksymbolright=\small\carriagereturn,
+	breakbytoken=false,
+	% showtabs=true,
+	% tab={\relscale{0.6} $\big\vert \ \ \ $ \relscale{1}},
+}
+
+\title{ACM 模板}
+\author{钱智煊，黄佳瑞，车昕宇}
+\date{\today}
+
+\begin{document}
+    \scriptsize
+    \maketitle
+    \newpage
+    
+    \begin{multicols}{2}
+        \tableofcontents
+        \newpage
+        
+        \section{图论}
+        \subsection{连通性相关}
+        \subsubsection{tarjan}
+        \inputminted{cpp}{src/graph/tarjan.cpp}
+        \subsubsection{tarjan求LCA}
+        \input{src/graph/tarjan.tex}
+        \inputminted{cpp}{src/graph/tarjan_lca.cpp}
+        \subsubsection{割点、割边}
+        \input{src/graph/cut.tex}
+        \subsubsection{圆方树}
+        \input{src/graph/圆方树.tex}
+        \inputminted{cpp}{src/graph/圆方树.cpp}
+        \subsection{同余最短路}
+        \input{src/graph/同余最短路.tex}
+    \end{multicols}
+\end{document}

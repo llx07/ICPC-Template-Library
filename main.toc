@@ -6,3 +6,4 @@
 \contentsline {subsubsection}{\numberline {1.1.4}圆方树}{3}{}%
 \contentsline {subsection}{\numberline {1.2}同余最短路}{3}{}%
 \contentsline {section}{\numberline {2}字符串}{4}{}%
+\contentsline {subsection}{\numberline {2.1}后缀数组（与后缀树）}{4}{}%

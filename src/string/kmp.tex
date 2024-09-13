@@ -1,0 +1,12 @@
+\inputminted{cpp}{src/string/kmp.cpp}
+字符串的border理论：
+以下记字符串 $S$ 的长度为 $n$ 。
+\begin{itemize}
+    \item 若串 $S$ 具备长度为 $m$ 的 border ，则其必然具备长度为 $n-m$ 的周期，反之亦然。
+    \item 弱周期性引理：若串 $S$ 存在周期 $p$ 、$q$ ，且 $p+q\le n$ ，则 $S$ 必然存在周期 $\gcd(p,q)$ 。
+    \item 引理1：若串 $S$ 存在长度为 $m$ 的 border $T$，且 $T$ 具备周期 $p$ ，满足 $2m-n\ge p$ ，则 $S$ 同样具备周期 $p$ 。
+    \item 周期性引理：若串 $S$ 存在周期 $p$ 、$q$ ，满足 $p+q-\gcd(p,q)\le n$ ，则串 $S$ 必然存在周期 $\gcd(p,q)$ 。
+    \item 引理2：串 $S$ 的所有 border 的长度构成了 $O(\log n)$ 个不交的等差数列。更具体的，记串 $S$ 的最小周期为 $p$ ，则其所有长度包含于区间 $[n \bmod p + p, n)$ 的 border 构成了一个等差数列。
+    \item 引理3：若存在串 $S$ 、$T$ ，使得 $2|T|\ge n$ ，则 $T$ 在 $S$ 中的所有匹配位置构成了一个等差数列。
+    \item 引理4：PAM 的失配链可以被划分为 $O(\log n)$ 个等差数列。
+\end{itemize}

@@ -1,0 +1,14 @@
+\inputminted{cpp}{src/data structure/heap.cpp}
+特别的，若要求给定节点所在左偏树的根，须使用并查集。对于每个节点维护 rt[] 值，查找根时使用函数：
+\begin{minted}{cpp}
+int find(int x) { return rt[x] == x ? x : rt[x] = find(rt[x]); }
+\end{minted}
+在合并节点时，加入：
+\begin{minted}{cpp}
+rt[x] = rt[y] = merge(x, y);
+\end{minted}
+在弹出最小值时加入：
+\begin{minted}{cpp}
+rt[ls(x)] = rt[rs(x)] = rt[x] = merge(ls(x), rs(x));
+\end{minted}
+另外，删除过的点是不能复用的，因为这些点可能作为并查集的中转节点。

@@ -1,0 +1,5 @@
+\begin{itemize}
+    \item 区间取 min 操作：通过维护区间次小值实现，即将区间取 min 转化为对区间最大值的加法，当要取 min 的值 v 大于次小值时停止递归。时间复杂度通过标记回收证明，即将区间最值视作标记，这样每次多余的递归等价于标记回收，总时间复杂度为 $O(m\log n)$。
+    \item 区间历史最大值：通过维护加法标记的历史最大值实现。
+\end{itemize}
+\inputminted{cpp}{src/data structure/seg-beats.cpp}

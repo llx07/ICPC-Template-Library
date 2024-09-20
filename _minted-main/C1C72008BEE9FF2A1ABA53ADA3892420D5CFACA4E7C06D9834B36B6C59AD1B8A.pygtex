@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{join}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{x1}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{x2}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n}{x1}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{o}{!}\PYG{n}{x2}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{x1}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{x2}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{pri}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{pri}\PYG{p}{(}\PYG{n}{x2}\PYG{p}{))}\PYG{+w}{ }\PYG{n}{swap}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{x2}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{ls}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{rs}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{split}\PYG{p}{(}\PYG{n}{x2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{val}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{ls}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{rs}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{ls}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{join}\PYG{p}{(}\PYG{n}{ls}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{ls}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{rs}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{join}\PYG{p}{(}\PYG{n}{rs}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{rs}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{pushup}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{x1}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

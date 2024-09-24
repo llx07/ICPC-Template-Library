@@ -1,0 +1,7 @@
+集合并等价于二进制按位或，因此并卷积的计算实际上就是做高维前缀和以及差分，也被称作莫比乌斯变换。
+\inputminted{cpp}{src/poly/or.cpp}
+而集合交卷积则对应后缀和。
+\inputminted{cpp}{src/poly/and.cpp}
+子集卷积则较为特殊，为了使得产生贡献的集合没有交集，考虑引入代表集合大小的占位符。这样只需做 $n$ 次 FMT ，再枚举长度做 $n^2$ 次卷积。因为 FMT 具备线性性，所以最后只需做 $n$ 次 iFMT 即可。
+\inputminted{cpp}{src/poly/linear.cpp}
+特别的，子集卷积等价于 $n$ 元保留到一次项的线性卷积。

@@ -85,6 +85,8 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \input{src/data structure/heap.tex}
         \subsection{吉司机线段树}
         \input{src/data structure/seg-beats.tex}
+        \subsection{树分治}
+        \input{src/data structure/tree-divide.tex}
         % 关于扫描线。
         % 线段树优化建图没有必要。
         % 线段树分治没有必要。
@@ -93,7 +95,6 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         % 树分块。
         % 树状数组上二分。
         % ETT 。
-        % 树分治（点分，边分，树剖）
         % cdq 以及其它分治。
         % 莫队。
 
@@ -112,5 +113,18 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \input{src/string/kmp.tex}
         \subsection{Z函数}
         \input{src/string/zfunc.tex}
+
+        \section{多项式}
+        \subsection{FFT}
+        \inputminted{cpp}{src/poly/fft.cpp}
+        \subsection{NTT}
+        \inputminted{cpp}{src/poly/ntt.cpp}
+        \subsection{集合幂级数}
+        \subsubsection{并卷积、交卷积与子集卷积}
+        \input{src/poly/high-dim-sum.tex}
+        \subsubsection{对称差卷积}
+        \input{src/poly/multi-poly.tex}
+        \subsection{多项式全家桶}
+        \inputminted{cpp}{src/poly/poly.cpp}
     \end{multicols}
 \end{document}

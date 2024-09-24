@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.9)  21 SEP 2024 00:25
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.9)  24 SEP 2024 16:23
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -871,38 +871,54 @@ A.pygtex)
 (./_minted-main/A36056C69CD379DD9B40958A824115B5D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex)) (./src/data structure/seg-beats.tex [6]
 (./_minted-main/C46F0B762475B43A6437444B37A589EFD5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex))
+A.pygtex)) (./src/data structure/tree-divide.tex
+(./_minted-main/71B9E3E8D161E589A01E44F18FCDD543D5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex [7]))
 (./_minted-main/7595AB91FD206460A2335F36C1D8FE68D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex [7])
+A.pygtex)
 (./_minted-main/D24CF5186A96BF4BBA71BBE810068D58D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex)
 (./_minted-main/4D8480260008B1CC518EC58AC94761C0D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex)
+A.pygtex [8])
 (./_minted-main/D538A48F970187D607580DF988F196F0D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex
 Missing character: There is no ∈ (U+2208) in font [lmmono8-regular]:!
 Missing character: There is no ∈ (U+2208) in font [lmmono8-regular]:!
 ) (./src/string/kmp.tex
 (./_minted-main/752CBFDACBB66D5C1D92455EE7CA8CD4D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex) [8]) (./src/string/zfunc.tex
+A.pygtex)) (./src/string/zfunc.tex
 (./_minted-main/B7E284204B2C2644CCEEAA8DB96EE011D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex)) [9] (./main.aux)
+A.pygtex))
+(./_minted-main/1C3EC06760F82CCD5F2F791DC918BB01D5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex [9])
+(./_minted-main/7C63F6B887D9A3D8B4DBBA122EDD316FD5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex) (./src/poly/high-dim-sum.tex
+(./_minted-main/1B31013F08B053A4B19A1AA4C06D8511D5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex)
+(./_minted-main/433164BB4A3521C26A0C5A909E373895D5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex)
+(./_minted-main/7F26C3CA4B330B3CFE4826810B41A490D5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex)) (./src/poly/multi-poly.tex
+(./_minted-main/BC4BAAB339CB47BF5376CD23B9739CE4D5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex))
+(./_minted-main/2AAFDA2BEB4637E2D0529660BDFDF126D5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex [10]) [11] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/07/14>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1D49F2420B109D07E9075BFAE4161E8C;2704.
+(rerunfilecheck)             Checksum: 70A406E2D934970630193A0F0BF84943;3476.
 runsystem(del main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 19595 strings out of 474773
- 453043 string characters out of 5755060
- 2021842 words of memory out of 5000000
- 41353 multiletter control sequences out of 15000+600000
+ 19672 strings out of 474773
+ 458371 string characters out of 5755060
+ 2054842 words of memory out of 5000000
+ 41396 multiletter control sequences out of 15000+600000
  563119 words of font info for 87 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,9n,97p,1167b,1061s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,9n,97p,1167b,1069s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (9 pages).
+Output written on main.pdf (11 pages).

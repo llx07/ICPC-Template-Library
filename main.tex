@@ -46,19 +46,28 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \newpage
 
         \section{图论}
-        \subsection{连通性相关}
-        \subsubsection{tarjan}
-        \inputminted{cpp}{src/graph/tarjan.cpp}
-        \subsubsection{tarjan求LCA}
-        \input{src/graph/tarjan.tex}
-        \inputminted{cpp}{src/graph/tarjan_lca.cpp}
-        \subsubsection{割点、割边}
-        \input{src/graph/cut.tex}
-        \subsubsection{圆方树}
-        \input{src/graph/圆方树.tex}
-        \inputminted{cpp}{src/graph/圆方树.cpp}
-        \subsection{同余最短路}
-        \input{src/graph/同余最短路.tex}
+        \subsection{tarjan}
+        \subsubsection{有向图缩点}
+        \inputminted{cpp}{src/graph/tarjan-directed.cpp}
+        \subsubsection{无向图求割点}
+        \inputminted{cpp}{src/graph/tarjan-vertex.cpp}
+        \subsubsection{无向图求桥}
+        \inputminted{cpp}{src/graph/tarjan-edge.cpp}
+        \subsubsection{构建圆方树}
+        \input{src/graph/tarjan-tree.tex}
+        \subsubsection{2-SAT}
+        \input{src/graph/2sat.tex}
+        \subsection{欧拉路径}
+        \input{src/graph/euler-path.tex}
+        % \subsection{斯坦纳树}
+        \subsection{网络流}
+        \subsubsection{最大流（dinic）}
+        \inputminted{cpp}{src/graph/dinic.cpp}
+        \subsubsection{最小费用最大流（dinic）}
+        \inputminted{cpp}{src/graph/mcmf-dinic.cpp}
+        \subsubsection{最小费用最大流（edmonds-karp）}
+        \inputminted{cpp}{src/graph/mcmf-ek.cpp}
+        % \subsubsection{最小割树}
 
         \section{数据结构}
         \subsection{平衡树}
@@ -114,6 +123,10 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \subsection{Z函数}
         \input{src/string/zfunc.tex}
 
+        \section{数学}
+        % 记得写格林公式之类的。
+        % 还有单纯形法。
+
         \section{多项式}
         \subsection{FFT}
         \inputminted{cpp}{src/poly/fft.cpp}
@@ -126,5 +139,14 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \input{src/poly/multi-poly.tex}
         \subsection{多项式全家桶}
         \inputminted{cpp}{src/poly/poly.cpp}
+
+        \section{杂项与结论}
+        \subsection{对拍器}
+        \subsubsection{linux}
+        \inputminted{cpp}{src/tools/linux_checker.cpp}
+        \subsubsection{windows}
+        \inputminted{cpp}{src/tools/win_checker.cpp}
+        \subsection{阴间错误集锦}
+        % 构建表达式树
     \end{multicols}
 \end{document}

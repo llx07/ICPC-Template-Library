@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.9)  24 SEP 2024 16:23
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.9)  13 OCT 2024 23:05
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -791,7 +791,7 @@ LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 
 46.
  [2] (./_minted-main/xcode.pygstyle)
-(./_minted-main/E0510ECF454592D5A337E1CA88CF8493D5CFACA4E7C06D9834B36B6C59AD1B8
+(./_minted-main/89AF8B324BB6D1D43C1138EEBB4F46A5D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
@@ -816,37 +816,53 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
-) (./src/graph/tarjan.tex)
-(./_minted-main/1C3108557E7073330F81CDFC2BC83964D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex) (./src/graph/cut.tex) (./src/graph/圆方树.tex
-File: src/graph/圆方树.png Graphic file (type bmp)
-<src/graph/圆方树.png>
 )
-(./_minted-main/077B9097DFBEE43AC91AF6DE701A1122D5CFACA4E7C06D9834B36B6C59AD1B8
+(./_minted-main/6E3E83B53BF9943A942EAB27F5039C96D5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex)
+(./_minted-main/0D3419543EB6181596F7818B5935D3ECD5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex) (./src/graph/tarjan-tree.tex
+(./_minted-main/4CB084B1D256148E1E22EF6A65B338C6D5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex)) (./src/graph/2sat.tex) (./src/graph/euler-path.tex
+(./_minted-main/83CD8A224864AEB2F46A2068E49ACD3AD5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex))
+(./_minted-main/4D6EA9A82C2D72A8F378573C82DD94A3D5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex [3])
+(./_minted-main/B1A19244AF967D106BE6EDC5F7FCE62BD5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex
-Overfull \hbox (3.73193pt too wide) in paragraph at lines 13--13
-[]\TU/lmtt/m/n/8 x[][]=[][]sta[][[]tp[]],[]T[][[]x[]].[]pb[]([]All[]),[]T[][[]A
-ll[]].[]pb[]([]x[]),[]hav[][]++[];|  
+Overfull \hbox (75.94795pt too wide) in paragraph at lines 14--14
+[]\TU/lmtt/m/n/8 ver[][[]++[][]tot[]][]=[][]y[],[]nex[][[]tot[]][]=[][]hea[][[]
+x[]],[]hea[][[]x[]][]=[][]tot[],[]edg[][[]tot[]][]=[][]d[],[]Cost[][[]tot[]][]=
+[][]c[];|  
  []
 
-) (./src/graph/同余最短路.tex
-\openout3 = `main.pyg'.
+
+Overfull \hbox (80.19595pt too wide) in paragraph at lines 15--15
+[]\TU/lmtt/m/n/8 ver[][[]++[][]tot[]][]=[][]x[],[]nex[][[]tot[]][]=[][]hea[][[]
+y[]],[]hea[][[]y[]][]=[][]tot[],[]edg[][[]tot[]][]=[][]0[],[]Cost[][[]tot[]][]=
+[][][]c[];|  
+ []
 
 
-(./_minted-main/4AAD15EE58E124160ED51EBB99CD87C1D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex))
+Overfull \hbox (84.44395pt too wide) in paragraph at lines 46--46
+[]\TU/lmtt/m/n/8 sumcost[][]+=[][]Cost[][[]i[]][]*[][]tmp[],[]edg[][[]i[]][][]=
+[][]tmp[],[]edg[][[]i[][]^[][]1[]][]+=[][]tmp[],[]rest[][][]=[][]tmp[];|  
+ []
+
+)
+(./_minted-main/3D38EB07FCEB086B32BDCF6B4293E57FD5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex [4])
 (./_minted-main/AE125EC16C20D4FF09CB6B5851D4E4D7D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex [3]) (./src/data structure/treap-merge.tex
+A.pygtex) (./src/data structure/treap-merge.tex
 (./_minted-main/C1C72008BEE9FF2A1ABA53ADA3892420D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex))
 (./_minted-main/01B07F2BF4D098A64BE923635F8A5C20D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex [4])
+A.pygtex [5])
 (./_minted-main/363279AA0E4C1FD53D18B0B9AD7775B2D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex)
 (./_minted-main/F6EC69DFB9CE9230B7BC11774B1EC9A8D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex)
 (./_minted-main/023CA32DDC978EAAA7A020902B327214D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex [5])
+A.pygtex [6])
 (./_minted-main/FF51FD43480446B937FC32F440305C77D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex)
 (./_minted-main/7CF4048442DD2AC71367E0264570E2E9D5CFACA4E7C06D9834B36B6C59AD1B8
@@ -869,17 +885,17 @@ A.pygtex)
 
 
 (./_minted-main/A36056C69CD379DD9B40958A824115B5D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex)) (./src/data structure/seg-beats.tex [6]
+A.pygtex)) [7] (./src/data structure/seg-beats.tex
 (./_minted-main/C46F0B762475B43A6437444B37A589EFD5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex)) (./src/data structure/tree-divide.tex
 (./_minted-main/71B9E3E8D161E589A01E44F18FCDD543D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex [7]))
+A.pygtex [8]))
 (./_minted-main/7595AB91FD206460A2335F36C1D8FE68D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex)
 (./_minted-main/D24CF5186A96BF4BBA71BBE810068D58D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex)
 (./_minted-main/4D8480260008B1CC518EC58AC94761C0D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex [8])
+A.pygtex [9])
 (./_minted-main/D538A48F970187D607580DF988F196F0D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex
 Missing character: There is no ∈ (U+2208) in font [lmmono8-regular]:!
@@ -890,7 +906,7 @@ A.pygtex)) (./src/string/zfunc.tex
 (./_minted-main/B7E284204B2C2644CCEEAA8DB96EE011D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex))
 (./_minted-main/1C3EC06760F82CCD5F2F791DC918BB01D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex [9])
+A.pygtex [10])
 (./_minted-main/7C63F6B887D9A3D8B4DBBA122EDD316FD5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex) (./src/poly/high-dim-sum.tex
 (./_minted-main/1B31013F08B053A4B19A1AA4C06D8511D5CFACA4E7C06D9834B36B6C59AD1B8
@@ -902,23 +918,54 @@ A.pygtex)) (./src/poly/multi-poly.tex
 (./_minted-main/BC4BAAB339CB47BF5376CD23B9739CE4D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex))
 (./_minted-main/2AAFDA2BEB4637E2D0529660BDFDF126D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex [10]) [11] (./main.aux)
+A.pygtex [11])
+runsystem(del main.aex)...executed.
+
+runsystem(for ^%i in (python.exe python.bat python.cmd) do set > main.aex <nul:
+ /p x=^%~$PATH:i>> main.aex)...executed.
+
+runsystem(del main.aex)...executed.
+
+runsystem(python -c "import sys; import os; import textwrap; from io import ope
+n; fname = os.path.expanduser(os.path.expandvars(\"src/tools/linux_checker.cpp\
+")); f = open(fname, \"r\", encoding=\"UTF8\") if os.path.isfile(fname) else No
+ne; t = f.readlines() if f is not None else None; t_opt = t if t is not None el
+se []; f.close() if f is not None else None; tmpfname = os.path.expanduser(os.p
+ath.expandvars(\"main.pyg\")); f = open(tmpfname, \"w\", encoding=\"UTF8\") if 
+t is not None else None; fvstartnum = 0; fvstopnum = -1; s = max(0, fvstartnum-
+1); e = max(s, fvstopnum) if fvstopnum > 0 else len(t_opt); [f.write(textwrap.d
+edent(\"\".join(x))) for x in (t_opt[0:s], t_opt[s:e], t_opt[e:]) if x and t is
+ not None]; f.close() if t is not None else os.remove(tmpfname);")...executed.
+
+runsystem(pygmentize -l "cpp" -f latex -P commandprefix=PYG -F tokenmerge -P st
+ripnl="False" -P mathescape="True" -o _minted-main/4CEF775A4F84057BD54090898539
+927DD5CFACA4E7C06D9834B36B6C59AD1B8A.pygtex main.pyg)...executed.
+
+
+(./_minted-main/4CEF775A4F84057BD54090898539927DD5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex [12])
+(./_minted-main/8BC003A3BD40F94EF5ADAD08E0A9B58DD5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex)
+runsystem(del _minted-main\72D22E9EA4C8F31C4E7F980CA9DEA947D5CFACA4E7C06D9834B3
+6B6C59AD1B8A.pygtex)...executed.
+
+ [13] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/07/14>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 70A406E2D934970630193A0F0BF84943;3476.
+(rerunfilecheck)             Checksum: ACCBB48C2F821896EDED53C9E47CCBF9;4680.
 runsystem(del main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 19672 strings out of 474773
- 458371 string characters out of 5755060
- 2054842 words of memory out of 5000000
- 41396 multiletter control sequences out of 15000+600000
+ 19652 strings out of 474773
+ 458892 string characters out of 5755060
+ 2021842 words of memory out of 5000000
+ 41362 multiletter control sequences out of 15000+600000
  563119 words of font info for 87 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,9n,97p,1167b,1069s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,9n,97p,1167b,1020s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (11 pages).
+Output written on main.pdf (13 pages).

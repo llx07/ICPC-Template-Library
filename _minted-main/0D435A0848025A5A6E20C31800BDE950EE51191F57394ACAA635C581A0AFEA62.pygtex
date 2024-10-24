@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+g++\PYG{+w}{ }X.cpp\PYG{+w}{ }\PYGZhy{}Wall\PYG{+w}{ }\PYGZhy{}O2\PYG{+w}{ }\PYGZhy{}fsanitize\PYG{o}{=}undefined\PYG{+w}{ }\PYGZhy{}fsanitize\PYG{o}{=}address\PYG{+w}{ }X
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}fsanitize=undefined: 检测未定义行为}
+\PYG{c+c1}{\PYGZsh{} \PYGZhy{}fsanitize=address: 检测内存溢出}
+\end{Verbatim}

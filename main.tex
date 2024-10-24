@@ -1,6 +1,6 @@
 \documentclass[12pt, a4paper, oneside]{ctexart}
-\usepackage{minted, multicol, geometry, graphicx, fancyvrb}
-\usepackage{relsize, setspace, enumitem, float, hyperref}
+\usepackage{minted, multicol, geometry, graphicx, fancyvrb, amssymb}
+\usepackage{relsize, setspace, enumitem, float, hyperref, amsmath}
 
 \geometry{a4paper, scale = 0.85}
 
@@ -32,6 +32,23 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
 	% tab={\relscale{0.6} $\big\vert \ \ \ $ \relscale{1}},
 }
 
+\setminted[bash]{
+    style=xcode,
+	mathescape,
+	linenos,
+	autogobble,
+	baselinestretch=1,
+	tabsize=3,
+	fontsize=\scriptsize,
+	frame=single,
+	framesep=1mm,
+	framerule=0.3pt,
+	numbersep=1mm,
+	breaklines=true,
+	breaksymbolsepleft=2pt,
+	breakbytoken=false,
+}
+
 \title{ACM 模板}
 \author{钱智煊，黄佳瑞，车昕宇}
 \date{\today}
@@ -44,6 +61,16 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
     \begin{multicols}{2}
         \tableofcontents
         \newpage
+
+        \section{做题指导}
+        \subsection{上机前你应该注意什么}
+        \input{src/guide/before-code.tex}
+        \subsection{机上你应该注意什么}
+        \input{src/guide/on-code.tex}
+        \subsection{交题前你应该注意什么}
+        \input{src/guide/after-code.tex}
+        \subsection{如果你的代码挂了}
+        \input{src/guide/debug.tex}
 
         \section{图论}
         \subsection{tarjan}
@@ -67,6 +94,10 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \inputminted{cpp}{src/graph/mcmf-dinic.cpp}
         \subsubsection{最小费用最大流（edmonds-karp）}
         \inputminted{cpp}{src/graph/mcmf-ek.cpp}
+        \subsubsection{无源汇有上下界可行流}
+        \inputminted{cpp}{src/graph/feasible-bounded-flow.cpp}
+        \subsubsection{有源汇有上下界最大流}
+        \inputminted{cpp}{src/graph/max-bounded-flow.cpp}
         % \subsubsection{最小割树}
 
         \section{数据结构}
@@ -122,10 +153,24 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \input{src/string/kmp.tex}
         \subsection{Z函数}
         \input{src/string/zfunc.tex}
+        \subsection{后缀自动机}
 
-        \section{数学}
+        \section{线性代数}
+        \subsection{高斯消元}
+        \inputminted{cpp}{src/linear/gauss.cpp}
+        \subsection{线性基}
+        \inputminted{cpp}{src/linear/basis.cpp}
+        \subsection{行列式}
+        \input{src/linear/det.tex}
+        \subsection{矩阵树定理}
+        \input{src/linear/matrix-tree.tex}
+        \subsection{单纯形法}
+        \input{src/linear/simplex.tex}
+        \subsection{全幺模矩阵}
+        \input{src/linear/TUM.tex}
+        \subsection{对偶原理}
+        \input{src/linear/duality.tex}
         % 记得写格林公式之类的。
-        % 还有单纯形法。
 
         \section{多项式}
         \subsection{FFT}
@@ -140,13 +185,60 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \subsection{多项式全家桶}
         \inputminted{cpp}{src/poly/poly.cpp}
 
-        \section{杂项与结论}
+        \section{数论}
+        \subsection{中国剩余定理}
+        \input{src/number theory/crt.tex}
+        \subsection{扩展中国剩余定理}
+        \input{src/number theory/excrt.tex}
+        \subsection{BSGS}
+        \input{src/number theory/bsgs.tex}
+        \subsection{扩展 BSGS}
+        \input{src/number theory/exbsgs.tex}
+        \subsection{Lucas 定理}
+        \inputminted{cpp}{src/number theory/lucas.cpp}
+        \subsection{扩展 Lucas 定理}
+        \inputminted{cpp}{src/number theory/exlucas.cpp}
+        \subsection{杜教筛}
+        \input{src/number theory/du.tex}
+        \subsection{Min-25筛}
+        \input{src/number theory/min25.tex}
+
+        \section{计算几何}
+        \subsection{声明与宏}
+        \inputminted{cpp}{src/geometry/define.cpp}
+        \subsection{点与向量}
+        \inputminted{cpp}{src/geometry/vector.cpp}
+        \subsection{线}
+        \inputminted{cpp}{src/geometry/line.cpp}
+        \subsection{圆}
+        \inputminted{cpp}{src/geometry/circle.cpp}
+        \subsection{凸包}
+        \inputminted{cpp}{src/geometry/convex.cpp}
+        \subsection{三角形}
+        \inputminted{cpp}{src/geometry/triangle.cpp}
+        \subsection{多边形}
+        \inputminted{cpp}{src/geometry/polygon.cpp}
+        \subsection{半平面交}
+        \inputminted{cpp}{src/geometry/half-plane.cpp}
+
+        \section{杂项}
+        \subsection{生成树计数}
+        \input{src/else/tree-count.tex}
+        \subsection{类欧几里得}
+        \input{src/else/euclid.tex}
+
+        \section{其它工具}
+        \subsection{编译命令}
+        \inputminted{bash}{src/tools/compile.sh}
+        \subsection{快读}
+        \inputminted{cpp}{src/tools/fastio.cpp}
         \subsection{对拍器}
         \subsubsection{linux}
         \inputminted{cpp}{src/tools/linux_checker.cpp}
         \subsubsection{windows}
         \inputminted{cpp}{src/tools/win_checker.cpp}
         \subsection{阴间错误集锦}
+        \input{src/tools/der.tex}
         % 构建表达式树
     \end{multicols}
 \end{document}

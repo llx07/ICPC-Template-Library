@@ -1,0 +1,17 @@
+实际上是利用迪利克雷卷积来构造递推式，从而对一些积性函数快速求和的方法。
+
+我们现在考虑求取积性函数 $f$ 的前缀和 $F$ 。设存在函数 $g$ ，使得 $f*g$ 的前缀和可以被快速计算，那么：
+$$
+\begin{aligned}
+	\sum_{k=1}^n(f*g)(k)
+	&=\sum_{k=1}^n\sum_{d\mid k}f\left(\frac kd\right)\times g(d)\\
+	&=\sum_{d=1}^n\sum_{k=1}^{\lfloor n/ d \rfloor} f(k) \times g(d)\\
+	&=\sum_{d=1}^ng(d)\times F\left(\left\lfloor\frac nd\right\rfloor\right)\\
+	&=\sum_{d=2}^ng(d)\times F\left(\left\lfloor\frac nd\right\rfloor\right)+g(1)\times F(n)\\
+\end{aligned}
+$$
+则：
+$$
+F(n)=\left(\sum_{k=1}^n(f*g)(k)-\sum_{d=2}^ng(d)\times F\left(\left\lfloor\frac nd\right\rfloor\right)\right){\bigg /} g(1)
+$$
+若 $f*g$ 的前缀和可以被快速计算，我们就可以使用整除分块，从而把 $F(n)$ 划分为若干个子问题。使用时使用线性筛来预处理 $F$ 的前 $n^{\frac 23}$ 项，这样杜教筛的时间复杂度为 $O(n^{\frac 23})$ 。

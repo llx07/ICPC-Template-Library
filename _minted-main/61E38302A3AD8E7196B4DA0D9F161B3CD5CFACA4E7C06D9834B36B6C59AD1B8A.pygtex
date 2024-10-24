@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+cp}{\PYGZsh{}define cp const P\PYGZam{}}
+\PYG{c+cp}{\PYGZsh{}define cl const L\PYGZam{}}
+\PYG{c+cp}{\PYGZsh{}define cc const C\PYGZam{}}
+\PYG{c+cp}{\PYGZsh{}define vp vector\PYGZlt{}P\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}define cvp const vector\PYGZlt{}P\PYGZgt{}\PYGZam{}}
+\PYG{c+cp}{\PYGZsh{}define D double}
+\PYG{c+cp}{\PYGZsh{}define LD long double}
+\PYG{n}{std}\PYG{o}{::}\PYG{n}{mt19937}\PYG{+w}{ }\PYG{n+nf}{rnd}\PYG{p}{(}\PYG{n}{time}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{));}
+\PYG{k}{const}\PYG{+w}{ }\PYG{n}{LD}\PYG{+w}{ }\PYG{n}{eps}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{1e\PYGZhy{}12}\PYG{p}{;}
+\PYG{k}{const}\PYG{+w}{ }\PYG{n}{LD}\PYG{+w}{ }\PYG{n}{pi}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{numbers}\PYG{o}{::}\PYG{n}{pi}\PYG{p}{;}
+\PYG{k}{const}\PYG{+w}{ }\PYG{n}{LD}\PYG{+w}{ }\PYG{n}{INF}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{1e9}\PYG{p}{;}
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{sgn}\PYG{p}{(}\PYG{n}{LD}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{eps}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{x}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{n}{eps}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{l+m+mi}{\PYGZhy{}1}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

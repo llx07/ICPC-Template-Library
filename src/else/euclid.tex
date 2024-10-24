@@ -1,0 +1,12 @@
+$ax+by=n$ 的几何意义可以想象为一条直线，那么 $[0,n]$ 中可以被表示出来的整数就是 $(0,0),\left(\frac{n}{a},0\right),\left(0,\frac{n}{b}\right)$ 为顶点的三角形在第一象限内含有的整点个数。
+
+显然的结论就是，在 $[0,n]$ 可以表示出的整数数量为：
+$$
+\sum_{x=0}^{\lfloor\frac{n}{a}\rfloor}\left\lfloor\dfrac{n-ax}{b}\right\rfloor
+$$
+类欧几里得可以在 $\mathcal{O(\log{\max(a,b)})}$ 的时间内解决此类问题。
+
+求 $\sum_{i=0}^{n}\lfloor \frac{ai+b}{c} \rfloor$ ：
+\inputminted{cpp}{src/else/euclid1.cpp}
+求 $\sum_{i=0}^{n}{\lfloor \frac{ai+b}{c} \rfloor}^2$ 和 $\sum\limits_{i=0}^{n}i\lfloor \frac{ai+b}{c} \rfloor$ ，分别对应以下的 \verb|g| 和 \verb|h| ：
+\inputminted{cpp}{src/else/euclid2.cpp}

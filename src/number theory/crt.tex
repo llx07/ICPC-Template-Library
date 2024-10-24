@@ -1,0 +1,12 @@
+$$
+\begin{cases}
+	x\equiv a_1 \pmod {m_1}\\
+	x\equiv a_2 \pmod {m_2}\\
+	\cdots\\
+	x\equiv a_n \pmod {m_n}\\
+\end{cases}
+$$
+求解 $x$ ，其中 $m_1,m_2,\dots m_n$ 互素。
+$$
+x\equiv\sum_{i=1}^na_i\prod_{j\neq i}^n m_j\times\left(\left(\prod_{j\neq i}^n m_j\right)^{-1}\pmod{m_i}\right)\pmod{\prod_{i=1}^n m_i}
+$$

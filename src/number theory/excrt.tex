@@ -1,0 +1,23 @@
+用于求解同余方程组的模数并不互素的情况。我们考虑如何合并两个同余式：
+$$
+\begin{cases}
+	x \equiv a_1 \pmod {m_1}\\
+	x \equiv a_2 \pmod {m_2}\\
+\end{cases}
+$$
+显然其等价于：
+$$
+\begin{cases}
+	x = a_1 + k_1\times m_1\\
+	x = a_2 + k_2\times m_2\\
+\end{cases}
+$$
+联立可得：
+$$
+k_1m_1-k_2m_2=a_2-a_1
+$$
+我们解这个方程即可得出当前的解 $x_0$ 。且注意到我们若给 $x_0$ 加上若干个 $\operatorname{lcm}(m_1,m_2)$ ，上式仍然成立，即当前的解是在 $\bmod \operatorname{lcm}(m_1,m_2)$ 意义下的。这样我们得出新的同余式：
+$$
+x\equiv x_0 \pmod {\operatorname{lcm}(m_1,m_2)}
+$$
+与其它式子继续合并即可。注意在数据范围比较大的时候需要龟速加。

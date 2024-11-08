@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.9)  25 OCT 2024 15:43
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.9.9)  8 NOV 2024 16:20
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -901,7 +901,7 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 
  (./_minted-main/xcode.pygstyle)
 (./_minted-main/0D435A0848025A5A6E20C31800BDE950EE51191F57394ACAA635C581A0AFEA6
-2.pygtex)) (./src/guide/debug.tex)
+2.pygtex)) (./src/guide/debug.tex) (./src/guide/else.tex)
 (./_minted-main/89AF8B324BB6D1D43C1138EEBB4F46A5D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex)
 (./_minted-main/6E3E83B53BF9943A942EAB27F5039C96D5CFACA4E7C06D9834B36B6C59AD1B8
@@ -909,7 +909,7 @@ A.pygtex)
 (./_minted-main/0D3419543EB6181596F7818B5935D3ECD5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex) (./src/graph/tarjan-tree.tex
 (./_minted-main/4CB084B1D256148E1E22EF6A65B338C6D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex)) (./src/graph/2sat.tex) [3] (./src/graph/euler-path.tex
+A.pygtex [3])) (./src/graph/2sat.tex) (./src/graph/euler-path.tex
 (./_minted-main/83CD8A224864AEB2F46A2068E49ACD3AD5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex))
 (./_minted-main/4D6EA9A82C2D72A8F378573C82DD94A3D5CFACA4E7C06D9834B36B6C59AD1B8
@@ -921,21 +921,21 @@ A.pygtex)
 (./_minted-main/8D05428E6B20E57575915E6F99114099D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex [5])
 (./_minted-main/41328DFAF830E90E0AA6F7EB2F03924ED5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex)
+A.pygtex [6])
 (./_minted-main/AE125EC16C20D4FF09CB6B5851D4E4D7D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex [6]) (./src/data structure/treap-merge.tex
+A.pygtex) (./src/data structure/treap-merge.tex
 (./_minted-main/C1C72008BEE9FF2A1ABA53ADA3892420D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex))
 (./_minted-main/01B07F2BF4D098A64BE923635F8A5C20D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex)
-(./_minted-main/363279AA0E4C1FD53D18B0B9AD7775B2D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex [7])
+(./_minted-main/363279AA0E4C1FD53D18B0B9AD7775B2D5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex)
 (./_minted-main/F6EC69DFB9CE9230B7BC11774B1EC9A8D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex)
 (./_minted-main/023CA32DDC978EAAA7A020902B327214D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex)
-(./_minted-main/FF51FD43480446B937FC32F440305C77D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex [8])
+(./_minted-main/FF51FD43480446B937FC32F440305C77D5CFACA4E7C06D9834B36B6C59AD1B8
+A.pygtex)
 (./_minted-main/7CF4048442DD2AC71367E0264570E2E9D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex)
 (./_minted-main/CBA7A91D6CDE7327A3D4D22D775C7BE3D5CFACA4E7C06D9834B36B6C59AD1B8
@@ -956,9 +956,9 @@ A.pygtex)
 
 
 (./_minted-main/A36056C69CD379DD9B40958A824115B5D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex)) (./src/data structure/seg-beats.tex
+A.pygtex)) (./src/data structure/seg-beats.tex [9]
 (./_minted-main/C46F0B762475B43A6437444B37A589EFD5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex [9])) (./src/data structure/tree-divide.tex
+A.pygtex)) (./src/data structure/tree-divide.tex
 (./_minted-main/71B9E3E8D161E589A01E44F18FCDD543D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex [10]))
 (./_minted-main/7595AB91FD206460A2335F36C1D8FE68D5CFACA4E7C06D9834B36B6C59AD1B8
@@ -980,87 +980,20 @@ File: src/string/SAM.png Graphic file (type bmp)
 <src/string/SAM.png>
 \openout3 = `main.pyg'.
 
-runsystem(del main.aex)...executed.
-
-runsystem(for ^%i in (python.exe python.bat python.cmd) do set > main.aex <nul:
- /p x=^%~$PATH:i>> main.aex)...executed.
-
-runsystem(del main.aex)...executed.
-
-runsystem(python -c "import sys; import os; import textwrap; from io import ope
-n; fname = os.path.expanduser(os.path.expandvars(\"main.pyg\")); f = open(fname
-, \"r\", encoding=\"UTF8\") if os.path.isfile(fname) else None; t = f.readlines
-() if f is not None else None; t_opt = t if t is not None else []; f.close() if
- f is not None else None; tmpfname = os.path.expanduser(os.path.expandvars(\"ma
-in.pyg\")); f = open(tmpfname, \"w\", encoding=\"UTF8\") if t is not None else 
-None; fvstartnum = 0; fvstopnum = -1; s = max(0, fvstartnum-1); e = max(s, fvst
-opnum) if fvstopnum > 0 else len(t_opt); [f.write(textwrap.dedent(\"\".join(x))
-) for x in (t_opt[0:s], t_opt[s:e], t_opt[e:]) if x and t is not None]; f.close
-() if t is not None else os.remove(tmpfname);")...executed.
-
-runsystem(pygmentize -l "cpp" -f latex -P commandprefix=PYG -F tokenmerge -P st
-ripnl="False" -P mathescape="True" -o _minted-main/39E5F22F347D4419BDCAA94029EC
-6092D5CFACA4E7C06D9834B36B6C59AD1B8A.pygtex main.pyg)...executed.
-
 
 (./_minted-main/39E5F22F347D4419BDCAA94029EC6092D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex)
+A.pygtex [12])
 \openout3 = `main.pyg'.
-
-runsystem(python -c "import sys; import os; import textwrap; from io import ope
-n; fname = os.path.expanduser(os.path.expandvars(\"main.pyg\")); f = open(fname
-, \"r\", encoding=\"UTF8\") if os.path.isfile(fname) else None; t = f.readlines
-() if f is not None else None; t_opt = t if t is not None else []; f.close() if
- f is not None else None; tmpfname = os.path.expanduser(os.path.expandvars(\"ma
-in.pyg\")); f = open(tmpfname, \"w\", encoding=\"UTF8\") if t is not None else 
-None; fvstartnum = 0; fvstopnum = -1; s = max(0, fvstartnum-1); e = max(s, fvst
-opnum) if fvstopnum > 0 else len(t_opt); [f.write(textwrap.dedent(\"\".join(x))
-) for x in (t_opt[0:s], t_opt[s:e], t_opt[e:]) if x and t is not None]; f.close
-() if t is not None else os.remove(tmpfname);")...executed.
-
-runsystem(pygmentize -l "cpp" -f latex -P commandprefix=PYG -F tokenmerge -P st
-ripnl="False" -P mathescape="True" -o _minted-main/850061FE237C534C8A9251551F6E
-0C6AD5CFACA4E7C06D9834B36B6C59AD1B8A.pygtex main.pyg)...executed.
 
 
 (./_minted-main/850061FE237C534C8A9251551F6E0C6AD5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex)
 \openout3 = `main.pyg'.
 
-runsystem(python -c "import sys; import os; import textwrap; from io import ope
-n; fname = os.path.expanduser(os.path.expandvars(\"main.pyg\")); f = open(fname
-, \"r\", encoding=\"UTF8\") if os.path.isfile(fname) else None; t = f.readlines
-() if f is not None else None; t_opt = t if t is not None else []; f.close() if
- f is not None else None; tmpfname = os.path.expanduser(os.path.expandvars(\"ma
-in.pyg\")); f = open(tmpfname, \"w\", encoding=\"UTF8\") if t is not None else 
-None; fvstartnum = 0; fvstopnum = -1; s = max(0, fvstartnum-1); e = max(s, fvst
-opnum) if fvstopnum > 0 else len(t_opt); [f.write(textwrap.dedent(\"\".join(x))
-) for x in (t_opt[0:s], t_opt[s:e], t_opt[e:]) if x and t is not None]; f.close
-() if t is not None else os.remove(tmpfname);")...executed.
-
-runsystem(pygmentize -l "cpp" -f latex -P commandprefix=PYG -F tokenmerge -P st
-ripnl="False" -P mathescape="True" -o _minted-main/1A43CBD807774DB8534EA24DB52E
-5EFAD5CFACA4E7C06D9834B36B6C59AD1B8A.pygtex main.pyg)...executed.
-
 
 (./_minted-main/1A43CBD807774DB8534EA24DB52E5EFAD5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex [12])
+A.pygtex)
 \openout3 = `main.pyg'.
-
-runsystem(python -c "import sys; import os; import textwrap; from io import ope
-n; fname = os.path.expanduser(os.path.expandvars(\"main.pyg\")); f = open(fname
-, \"r\", encoding=\"UTF8\") if os.path.isfile(fname) else None; t = f.readlines
-() if f is not None else None; t_opt = t if t is not None else []; f.close() if
- f is not None else None; tmpfname = os.path.expanduser(os.path.expandvars(\"ma
-in.pyg\")); f = open(tmpfname, \"w\", encoding=\"UTF8\") if t is not None else 
-None; fvstartnum = 0; fvstopnum = -1; s = max(0, fvstartnum-1); e = max(s, fvst
-opnum) if fvstopnum > 0 else len(t_opt); [f.write(textwrap.dedent(\"\".join(x))
-) for x in (t_opt[0:s], t_opt[s:e], t_opt[e:]) if x and t is not None]; f.close
-() if t is not None else os.remove(tmpfname);")...executed.
-
-runsystem(pygmentize -l "cpp" -f latex -P commandprefix=PYG -F tokenmerge -P st
-ripnl="False" -P mathescape="True" -o _minted-main/064AB11A6BD09D9E3B1187FCD0C7
-FE40D5CFACA4E7C06D9834B36B6C59AD1B8A.pygtex main.pyg)...executed.
 
 
 (./_minted-main/064AB11A6BD09D9E3B1187FCD0C7FE40D5CFACA4E7C06D9834B36B6C59AD1B8
@@ -1068,7 +1001,7 @@ A.pygtex))
 (./_minted-main/74D256AF9D6FD2E24DF7E551D03C8F28D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex)
 (./_minted-main/5FA8C293A523BD4BA3FECDC33C07B836D5CFACA4E7C06D9834B36B6C59AD1B8
-A.pygtex) (./src/linear/det.tex [13]
+A.pygtex [13]) (./src/linear/det.tex
 (./_minted-main/7730EABF4C57D781B718F1F8ED16F0D8D5CFACA4E7C06D9834B36B6C59AD1B8
 A.pygtex)) (./src/linear/matrix-tree.tex) (./src/linear/simplex.tex
 (./_minted-main/F8BF56503D047D77C04ACCFE784444E9D5CFACA4E7C06D9834B36B6C59AD1B8
@@ -1141,17 +1074,17 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/07/14>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4B778E9C83790722F71188BB0BD97624;8349.
+(rerunfilecheck)             Checksum: F9FF19C3E479A9F6B03EFDD04E69C5D8;8471.
 runsystem(del main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 21281 strings out of 474773
- 497270 string characters out of 5755060
+ 21285 strings out of 474773
+ 497361 string characters out of 5755060
  2023842 words of memory out of 5000000
- 42809 multiletter control sequences out of 15000+600000
+ 42811 multiletter control sequences out of 15000+600000
  566727 words of font info for 104 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,10n,97p,1450b,1102s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,10n,97p,1450b,1104s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on main.pdf (25 pages).

@@ -1,6 +1,7 @@
 \documentclass[12pt, a4paper, oneside]{ctexart}
 \usepackage{minted, multicol, geometry, graphicx, fancyvrb, amssymb}
 \usepackage{relsize, setspace, enumitem, float, hyperref, amsmath}
+\usepackage[table,xcdraw]{xcolor} % 表格背景颜色
 
 \geometry{a4paper, scale = 0.85}
 
@@ -253,6 +254,10 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \inputminted{cpp}{src/tools/fastio.cpp}
         \subsection{对拍器}
         \inputminted{python3}{src/tools/llx_checker.py}
+        \subsection{常用数学函数值}
+        \input{src/tools/function_value.tex}
+        \subsection{因数、质数表}
+        \input{src/tools/prime_factor_table.tex}
         % \subsubsection{linux}
         % \inputminted{cpp}{src/tools/linux_checker.cpp}
         % \subsubsection{windows}

@@ -2,10 +2,9 @@ import os
 
 while True:
     os.system("python3 data.py > in")
-    os.system('/usr/bin/time -f "test time = %e" ./test < in > out')
-    os.system('/usr/bin/time -f "std time = %e" ./std < in > ans')
-    if os.system("diff out ans"):
+    os.system("/usr/bin/time -f 'test Time=%es' ./test < in > out")
+    os.system("/usr/bin/time -f 'std Time=%es' ./std < in > ans")
+    if os.system("diff out ans >/dev/null"):
         print("WA")
         exit(1)
     print("AC")
-        

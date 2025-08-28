@@ -31,7 +31,7 @@
 \contentsline {subsection}{\numberline {3.5}二维树状数组}{9}{subsection.3.5}%
 \contentsline {subsection}{\numberline {3.6}虚树}{9}{subsection.3.6}%
 \contentsline {subsection}{\numberline {3.7}左偏树}{9}{subsection.3.7}%
-\contentsline {subsection}{\numberline {3.8}吉司机线段树}{10}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.8}吉司机线段树}{9}{subsection.3.8}%
 \contentsline {subsection}{\numberline {3.9}树分治}{10}{subsection.3.9}%
 \contentsline {section}{\numberline {4}字符串}{11}{section.4}%
 \contentsline {subsection}{\numberline {4.1}后缀数组（与后缀树）}{11}{subsection.4.1}%
@@ -44,7 +44,7 @@
 \contentsline {section}{\numberline {5}线性代数}{13}{section.5}%
 \contentsline {subsection}{\numberline {5.1}高斯消元}{13}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}线性基}{13}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}行列式}{14}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.3}行列式}{13}{subsection.5.3}%
 \contentsline {subsection}{\numberline {5.4}矩阵树定理}{14}{subsection.5.4}%
 \contentsline {subsection}{\numberline {5.5}单纯形法}{14}{subsection.5.5}%
 \contentsline {subsection}{\numberline {5.6}全幺模矩阵}{15}{subsection.5.6}%
@@ -52,8 +52,8 @@
 \contentsline {section}{\numberline {6}多项式}{15}{section.6}%
 \contentsline {subsection}{\numberline {6.1}FFT}{15}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}NTT}{15}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}集合幂级数}{16}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}并卷积、交卷积与子集卷积}{16}{subsubsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3}集合幂级数}{15}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}并卷积、交卷积与子集卷积}{15}{subsubsection.6.3.1}%
 \contentsline {subsubsection}{\numberline {6.3.2}对称差卷积}{16}{subsubsection.6.3.2}%
 \contentsline {subsection}{\numberline {6.4}多项式全家桶}{16}{subsection.6.4}%
 \contentsline {section}{\numberline {7}数论}{17}{section.7}%
@@ -61,17 +61,17 @@
 \contentsline {subsection}{\numberline {7.2}扩展中国剩余定理}{17}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}BSGS}{17}{subsection.7.3}%
 \contentsline {subsection}{\numberline {7.4}扩展 BSGS}{17}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Lucas 定理}{18}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.5}Lucas 定理}{17}{subsection.7.5}%
 \contentsline {subsection}{\numberline {7.6}扩展 Lucas 定理}{18}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}杜教筛}{19}{subsection.7.7}%
+\contentsline {subsection}{\numberline {7.7}杜教筛}{18}{subsection.7.7}%
 \contentsline {subsection}{\numberline {7.8}Min-25筛}{19}{subsection.7.8}%
 \contentsline {section}{\numberline {8}计算几何}{20}{section.8}%
 \contentsline {subsection}{\numberline {8.1}声明与宏}{20}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}点与向量}{20}{subsection.8.2}%
 \contentsline {subsection}{\numberline {8.3}线}{20}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}圆}{21}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.4}圆}{20}{subsection.8.4}%
 \contentsline {subsection}{\numberline {8.5}凸包}{21}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}三角形}{23}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.6}三角形}{22}{subsection.8.6}%
 \contentsline {subsection}{\numberline {8.7}多边形}{23}{subsection.8.7}%
 \contentsline {subsection}{\numberline {8.8}半平面交}{23}{subsection.8.8}%
 \contentsline {section}{\numberline {9}杂项}{24}{section.9}%
@@ -79,8 +79,6 @@
 \contentsline {subsection}{\numberline {9.2}类欧几里得}{24}{subsection.9.2}%
 \contentsline {section}{\numberline {10}其它工具}{24}{section.10}%
 \contentsline {subsection}{\numberline {10.1}编译命令}{24}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}快读}{25}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}对拍器}{25}{subsection.10.3}%
-\contentsline {subsubsection}{\numberline {10.3.1}linux}{25}{subsubsection.10.3.1}%
-\contentsline {subsubsection}{\numberline {10.3.2}windows}{25}{subsubsection.10.3.2}%
+\contentsline {subsection}{\numberline {10.2}快读}{24}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}对拍器}{24}{subsection.10.3}%
 \contentsline {subsection}{\numberline {10.4}阴间错误集锦}{25}{subsection.10.4}%

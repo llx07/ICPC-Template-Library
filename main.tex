@@ -48,6 +48,22 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
 	breaksymbolsepleft=2pt,
 	breakbytoken=false,
 }
+\setminted[python3]{
+    style=xcode,
+	mathescape,
+	linenos,
+	autogobble,
+	baselinestretch=1,
+	tabsize=3,
+	fontsize=\scriptsize,
+	frame=single,
+	framesep=1mm,
+	framerule=0.3pt,
+	numbersep=1mm,
+	breaklines=true,
+	breaksymbolsepleft=2pt,
+	breakbytoken=false,
+}
 
 \title{ACM 模板}
 \author{黄佳瑞，钱智煊，林乐逍}
@@ -236,10 +252,11 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \subsection{快读}
         \inputminted{cpp}{src/tools/fastio.cpp}
         \subsection{对拍器}
-        \subsubsection{linux}
-        \inputminted{cpp}{src/tools/linux_checker.cpp}
-        \subsubsection{windows}
-        \inputminted{cpp}{src/tools/win_checker.cpp}
+        \inputminted{python3}{src/tools/llx_checker.py}
+        % \subsubsection{linux}
+        % \inputminted{cpp}{src/tools/linux_checker.cpp}
+        % \subsubsection{windows}
+        % \inputminted{cpp}{src/tools/win_checker.cpp}
         \subsection{阴间错误集锦}
         \input{src/tools/der.tex}
         % 构建表达式树

@@ -1,2 +1,35 @@
-将点双连通分量定义为不含割点的联通图。将原图中的点称作圆点，而每个点双对应一个方点。将每个圆点向其所在的所有点双对应方点连边，就得到了圆方树。特别的，仅含一条边的图也是点双（因其不含割点），这保证了圆方树的连通性。
-\inputminted{cpp}{src/graph/tarjan-tree.cpp}
+将点双连通分量定义为不含割点的联通图。
+
+将原图中的点称作圆点，而每个点双对应一个方点。将每个圆点向其所在的所有点双对应方点连边，就得到了圆方树。
+
+特别的，仅含一条边的图也是点双（因其不含割点），这保证了圆方树的连通性。
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{https://pic.imgdb.cn/item/66d46de3d9c307b7e9acf664.png}
+    \caption{圆方树示意图}
+\end{figure}
+
+圆方树会建立很多新的点，所以不要忘记\textbf{给数组开两倍！}
+
+\begin{minted}{cpp}
+void tarjan(int u)
+{
+    dfn[u]=low[u]=++Time,sta[++tp]=u;
+    for(int v:G[u])
+    {
+        if(!dfn[v])
+        {
+            tarjan(v),low[u]=min(low[u],low[v]);
+            if(low[v]==dfn[u])
+            {
+                int hav=0; ++All;
+                for(int x=0;x!=v;tp--) x=sta[tp],T[x].pb(All),T[All].pb(x),hav++;
+                T[u].pb(All),T[All].pb(u),;
+                siz[All]=++hav;
+            }
+        }
+        else low[u]=min(low[u],dfn[v]);
+    }
+}
+\end{minted}

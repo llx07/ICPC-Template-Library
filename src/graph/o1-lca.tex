@@ -1,0 +1,23 @@
+按照顺序遍历子树，并查集更新。
+
+\begin{minted}{cpp}
+int qhea[Maxq],qver[Maxq],qnex[Maxq],qid[Maxq];
+inline void addq(int x,int y,int d)
+    { qver[++qtot]=y,qnex[qtot]=qhea[x],qhea[x]=qtot,qid[qtot]=d; }
+void dfs(int x,int Last_node)
+{
+    vis[x]=true;
+    for(int i=hea[x];i;i=nex[i])
+        if(ver[i]!=Last_node)
+            dfs(ver[i],x),fa[ver[i]]=x;
+    for(int i=qhea[x];i;i=qnex[i])
+        if(vis[qver[i]])
+            ans[qid[i]]=Find(qver[i]);
+}
+
+for(int i=1;i<=n;i++) fa[i]=i;
+for(int i=1,x,y;i<n;i++) x=rd(),y=rd(),add(x,y),add(y,x);
+for(int i=1,x,y;i<=m;i++) x=rd(),y=rd(),addq(x,y,i),addq(y,x,i);
+dfs(rt,rt);
+for(int i=1;i<=m;i++) printf("%d\n",ans[i]);
+\end{minted}

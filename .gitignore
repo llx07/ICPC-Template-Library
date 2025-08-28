@@ -1,1 +1,14 @@
-_minted
+_minted                                             
+_minted-main
+*.aux
+*.log
+*.synctex.gz
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz(busy)
+*.synctex(busy)
+*.toc
+*.xdv

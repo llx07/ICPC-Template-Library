@@ -180,7 +180,9 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \subsection{Z函数}
         \input{src/string/zfunc.tex}
         \subsection{后缀自动机}
-        \input{src/string/SAM.tex}
+        \inputminted{cpp}{src/string/SAM.cpp}
+        \subsection{后缀自动机(map版)}
+        \inputminted[highlightlines={3,10,15,18}]{cpp}{src/string/SAM_map.cpp}
 
         \section{线性代数}
         \subsection{高斯消元}

@@ -10,6 +10,7 @@
 \setdescription{itemsep=0pt,pa
 rtopsep=0pt,parsep=\parskip,topsep=0pt}
 \setlength{\parindent}{0pt}
+\setlength{\columnsep}{18pt}
 
 \setminted[cpp]{
 	style=xcode,
@@ -91,6 +92,7 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \subsection{另外一些注意事项}
         \input{src/guide/else.tex}
 
+        \newpage
         \section{图论}
         \subsection{Tarjan 边双、点双（圆方树）}
         \input{src/graph/tarjan.tex}
@@ -156,7 +158,9 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \section{字符串}
         \subsection{Hash 类}
         \inputminted{cpp}{src/string/hash.cpp}
-        \subsection{后缀数组（与后缀树）}
+        \subsection{后缀数组（llx）}
+        \inputminted{cpp}{src/string/llx_SA.cpp}
+        \subsection{后缀数组与后缀树（旧）}
         \inputminted{cpp}{src/string/SA.cpp}
         \subsection{AC自动机}
         \inputminted{cpp}{src/string/ACAM.cpp}
@@ -169,7 +173,11 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \subsection{Z函数}
         \input{src/string/zfunc.tex}
         \subsection{后缀自动机}
-        \input{src/string/SAM.tex}
+        \inputminted{cpp}{src/string/SAM.cpp}
+        \subsection{后缀自动机(map版)}
+        \inputminted[highlightlines={3,10,15,18}]{cpp}{src/string/SAM_map.cpp}
+        \subsection{最小表示法}
+        \inputminted{cpp}{src/string/min_pos.cpp}
 
         \section{线性代数}
         \subsection{高斯消元}

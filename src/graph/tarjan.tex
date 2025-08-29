@@ -1,12 +1,12 @@
 记录上一个访问的边时要记录边的编号，不能记录上一个过来的节点（因为会有重边）！！！
 
-（如果选择在加边的时候特判，注意编号问题：用输入顺序来对应数组中位置的时候，重边跳过，但是需要 `tot+=2`。）
+（如果选择在加边的时候特判，注意编号问题：用输入顺序来对应数组中位置的时候，重边跳过，但是需要 tot+=2。）
 
 圆方树示意图：
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{src/graph/tarjan-tree.png}
+    \includegraphics[width=0.45\textwidth]{src/graph/tarjan-tree.png}
     \caption{圆方树示意图}
 \end{figure}
 
@@ -44,7 +44,7 @@ void tarjan(int x,int Last)
     }
 }
 /*** 圆方树、点双 ***/
-// `G` 表示原图，`T` 是新建的圆方树
+// G 表示原图，T 是新建的圆方树
 // 一条边也是点双
 // 圆方树只存在圆 - 方边！！！
 int Time,dfn[N],low[N],sta[N],siz[N];

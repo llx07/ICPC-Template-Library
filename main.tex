@@ -92,36 +92,25 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \input{src/guide/else.tex}
 
         \section{图论}
-        \subsection{Tarjan 点双、边双}
-        \input{src\graph\tarjan-scc.tex}
-        \subsection{Tarjan 圆方树}
-        \input{src\graph\tarjan-tree.tex}
+        \subsection{Tarjan 边双、点双（圆方树）}
+        \input{src/graph/tarjan.tex}
         \subsection{O(1) LCA}
-        \input{src\graph\o1-lca.tex}
-        \subsubsection{有向图缩点}
-        \inputminted{cpp}{src/graph/tarjan-directed.cpp}
-        \subsubsection{无向图求割点}
-        \inputminted{cpp}{src/graph/tarjan-vertex.cpp}
-        \subsubsection{无向图求桥}
-        \inputminted{cpp}{src/graph/tarjan-edge.cpp}
-        \subsubsection{构建圆方树}
-        \input{src/graph/tarjan-tree.tex}
-        \subsubsection{2-SAT}
+        \input{src/graph/o1lca.tex}
+        \subsection{2-SAT}
         \input{src/graph/2sat.tex}
+        \subsection{Dinic 网络流、费用流}
+        \inputminted{cpp}{src/graph/dinic-flow.cpp}
+        \inputminted{cpp}{src/graph/dinic-cost.cpp}
+        \subsubsection{无源汇有上下界可行流}
+        \input{src/graph/无源汇上下界可行流.tex}
+        \subsubsection{有源汇有上下界最大流}
+        \input{src/graph/有源汇上下界最大流.tex}
+        \subsubsection{网络流总结}
+        \input{src/graph/网络流总结.tex} % 从 nemesis 复制过来的，需要修改
+
         \subsection{欧拉路径}
         \input{src/graph/euler-path.tex}
         % \subsection{斯坦纳树}
-        \subsection{网络流}
-        \subsubsection{最大流（dinic）}
-        \inputminted{cpp}{src/graph/dinic.cpp}
-        \subsubsection{最小费用最大流（dinic）}
-        \inputminted{cpp}{src/graph/mcmf-dinic.cpp}
-        \subsubsection{最小费用最大流（edmonds-karp）}
-        \inputminted{cpp}{src/graph/mcmf-ek.cpp}
-        \subsubsection{无源汇有上下界可行流}
-        \inputminted{cpp}{src/graph/feasible-bounded-flow.cpp}
-        \subsubsection{有源汇有上下界最大流}
-        \inputminted{cpp}{src/graph/max-bounded-flow.cpp}
         % \subsubsection{最小割树}
 
         \section{数据结构}

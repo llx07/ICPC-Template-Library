@@ -17,4 +17,4 @@ struct SAM{ // 注意修改字符集！字符集是小写字母吗？
         f[q]=f[cur]=clone;
         for(;p&&ch[p].count(c)&&ch[p][c]==q;p=f[p]) ch[p][c]=clone;
     }
-}sam;
+}sam; // 注意任何跟 SAM 有关的数组都要开两倍

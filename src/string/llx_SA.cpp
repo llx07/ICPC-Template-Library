@@ -10,7 +10,7 @@ struct SuffixArray {
         iota(sa.begin(), sa.end(), 0);
         sort(sa.begin(), sa.end(), [&](int a, int b) {return s[a] < s[b];});
         rk[sa[0]] = 0;
-        for (int i=1;i<n;++i)rk[sa[i]]=rk[sa[i-1]]+(s[sa[i]]!=s[sa[i-1]]);
+        for (int i=1;i<n;++i) rk[sa[i]]=rk[sa[i-1]]+(s[sa[i]]!=s[sa[i-1]]);
         int k = 1;
         vector<int> tmp, cnt(n);
         tmp.reserve(n);

@@ -1,0 +1,27 @@
+$\bigstar\texttt{attention}$：由于整个图需要用到的边与点很少，所以在每次新建虚树的时候不能全局清空，而是在把一个新的点加入栈中的时候清空这个点连过的边。
+
+$\bigstar\texttt{attention}$：一定要在将这个点加入栈的时候清空这个点的连边情况！！！！不能早也不能晚。
+
+\begin{minted}{cpp}
+inline void build(int s)
+{
+    sort(dot+1,dot+m+1,cmp),tot=0;
+    sta[tp=1]=1,hea[1]=0;
+    for(int i=1,l;i<=m;i++)
+    {
+        if(dot[i]==1) continue; // 别忘了 1！ 
+        l=Lca(sta[tp],dot[i]);
+        if(l!=sta[tp])
+        {
+            while(dfn[l]<dfn[sta[tp-1]])
+                add(sta[tp-1],sta[tp],dist(sta[tp]-sta[tp-1])),tp--;
+            if(sta[tp-1]==l)
+                add(l,sta[tp],dist(sta[tp]-l)),tp--;
+            else
+                hea[l]=0,add(l,sta[tp],dist(sta[tp]-l)),sta[tp]=l;
+        }
+        hea[dot[i]]=0,sta[++tp]=dot[i];
+    }
+    for(int i=1;i<tp;i++) add(sta[i],sta[i+1],dist(sta[i+1]-sta[i]));
+}
+\end{minted}

@@ -1,0 +1,44 @@
+\begin{minted}{cpp}
+struct Line { double b,k; }a[Maxn];
+inline double calc(int p,int x){ return a[p].b+a[p].k*1.0*x; }
+inline int tomax(int p1,int p2,int x)
+    { return (calc(p1,x)>calc(p2,x)+eps)?p1:p2; }
+struct Segment_Tree
+{
+    int tree[Maxn<<2];
+    void add(int p,int nl,int nr,int l,int r,int x)
+    {
+        int mid=(nl+nr)>>1;
+        if(nl>=l && nr<=r)
+        {
+            if(calc(x,mid)>calc(tree[p],mid)+eps) swap(tree[p],x);
+            if(calc(x,nl)>calc(tree[p],nl)+eps) add(p<<1,nl,mid,l,r,x);
+            if(calc(x,nr)>calc(tree[p],nr)+eps) add(p<<1|1,mid+1,nr,l,r,x);
+            return;
+        } // 插入 O(log^2n) ：定位到 O(logn) 个区间，每个区间 O(logn) 递归到叶子。
+        if(mid>=l) add(p<<1,nl,mid,l,r,x);
+        if(mid<r) add(p<<1|1,mid+1,nr,l,r,x);
+    }
+    int query(int p,int nl,int nr,int x)
+    {
+        if(nl==nr) return tree[p];
+        int mid=(nl+nr)>>1;
+        if(mid>=x) return tomax(tree[p],query(p<<1,nl,mid,x),x);
+        else return tomax(tree[p],query(p<<1|1,mid+1,nr,x),x);
+    }
+}T;
+\end{minted}
+
+李超线段树的合并本质上和线段树没什么区别，只是在 merge 完两棵子树后的 update 中改为将 $y$ 的最优线段再放到 $x$ 中进行一次 add 即可。
+
+\begin{minted}{cpp}
+int merge(int x,int y,int nl,int nr)
+{
+    if(!x || !y) return x+y;
+    int mid=(nl+nr)>>1;
+    tree[x].pl=merge(tree[x].pl,tree[y].pl,nl,mid);
+    tree[x].pr=merge(tree[x].pr,tree[y].pr,mid+1,nr);
+    add(x,nl,nr,tree[y].num);
+    return x;
+}
+\end{minted}

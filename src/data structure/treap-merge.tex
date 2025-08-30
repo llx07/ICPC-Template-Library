@@ -1,3 +1,7 @@
-注意这里的合并是指合并两个值域相交的集合，并且这个操作应该只有 treap 支持。代码如下：
+如果需要合并两个有交集的 Treap 时该怎么做？我们可以每次将较小的数合并到较大的树中去，这样每个点最多只会合并 $\log n$ 次，每次合并复杂度 $O(n\log n)$，总时间复杂度 $O(n\log n\log V)$。
+
+代码其实非常暴力，就是直接对更小的那棵树直接一个个插入进去：
+
 \inputminted{cpp}{src/data structure/treap-merge.cpp}
-\href{https://codeforces.com/blog/entry/108601}{可以证明}，以上操作的总时间复杂度为 $O(n\log n\log V)$ ，其中 $n$ 为元素总个数，$V$ 为值域。而在特定的场景下，时间复杂度会更优。（例如若只支持合并与分裂操作，则时间复杂度为 $O(n\log n)$ 。）
+
+\href{https://codeforces.com/blog/entry/108601}{可以证明}，若只支持合并与分裂操作，则时间复杂度为 $O(n\log n)$ 。

@@ -1,19 +1,14 @@
-int s[N], top, head[N], now[N], used[M << 1], cnt;
-struct edge {
-    int a, b, next;
-} e[M << 1];
-void add(int a, int b) {
-    e[++cnt] = {a, b, head[a]};
-    head[a] = cnt;
-} // cnt 的初值为 1 ，head[] 的初值为 0 。即从 2 开始编号，以保证异或 1 得到反向边。
-void dfs(int x) {
-    while (now[x]) { // now[] 的初值为 head[] 。
-        int i = now[x];
-        now[x] = e[now[x]].next;
-        if (!used[i]) {
-            used[i] = used[i ^ 1] = 1;
-            dfs(e[i].b);
-        }
+int tp,sta[N];
+int tot,hea[N],tmphea[N],used[M<<1],ver[M<<1],nex[M<<1];
+void add(int x,int y) { ver[++tot]=y,nex[tot]=hea[x],hea[x]=tot; }
+// tot 初值为 1 ; tmphea 初值为 hea
+void dfs(int x)
+{
+    while (tmphea[x])
+    {
+        int i=tmphea[x];
+        tmphea[x]=nex[i];
+        if(!used[i]) used[i]=used[i^1]=1,dfs(ver[i]);
     }
-    s[++top] = x;
-} // s[] 存储了反向的欧拉路。
+    sta[++tp]=x;
+} // sta[] 存储了反向的欧拉路。

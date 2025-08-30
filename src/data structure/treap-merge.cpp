@@ -1,9 +1,10 @@
-int join(int x1, int x2) {
-    if (!x1 || !x2) return x1 + x2;
-    if (pri(x1) > pri(x2)) swap(x1, x2);
-    int ls, rs;
-    split(x2, val(x1), ls, rs);
-    ls(x1) = join(ls(x1), ls);
-    rs(x1) = join(rs(x1), rs);
-    return pushup(x1), x1;
+// ls,rs 为 tree[p].pl 和 tree[p].pr
+void mergetree(int p,int &rt) // rt = (rt+p)
+{
+    if(!p) return;
+    mergetree(ls,rt);
+    mergetree(rs,rt);
+    int x,y;
+    split(rt,tree[p].val,x,y);
+    ls=rs=0,rt=merge(merge(x,p),y);
 }

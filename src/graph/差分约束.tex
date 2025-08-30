@@ -1,0 +1,40 @@
+\textbf{差分约束系统} 是一种特殊的 $n$ 元一次不等式组 。
+
+差分约束系统中的每个约束条件 $x_i-x_j\le c_k$ 都可以变形成 $x_i\le x_j+c_k$ 与 $x_j\ge x_i-c_k$ ，这与单源最短路中的三角形不等式非常相似。因此，我们可以把每个变量 $x_i$ 看做图中的一个结点，对于每个约束条件连边。
+
+需要注意的是，有些题目看能会对解的上、下界进行约束，因此我们需要对这些条件处理（这里只考虑对于这 $n$ 个元素 \textbf{只约束了上界} 或 \textbf{只约束了下界} ）：
+
+\begin{itemize}
+    \item 只约束下界：有 $0$ 号点向每一个点连一条长为 $Lim_i$ 的边，表示第 $i$ 号元素的 \textbf{下界} 为 $Lim_i$ ，如图所示建边：
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            题意 & 转化 & 连边 \\
+            \hline
+            $x_a-x_b\ge c$ & $x_a\ge x_b+c$ & \texttt{add(b,a,c)} \\
+            $x_a-x_b\le c$ & $x_b\ge x_a-c$ & \texttt{add(a,b,-c)} \\
+            $x_a=x_b$ & $x_a\ge x_b$ ， $x_b\le x_a$ & \texttt{add(a,b,0),add(b,a,0)} \\
+            \hline
+        \end{tabular}
+    \end{center}
+    之后对整张图跑 \textbf{最长路} 。
+    \item 只约束上界：有 $0$ 号点向每一个点连一条长为 $Lim_i$ 的边，表示第 $i$ 号元素的 \textbf{上界} 为 $Lim_i$ ，如图所示建边：
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            题意 & 转化 & 连边 \\
+            \hline
+            $x_a-x_b\ge c$ & $x_b\le x_a-c$ & \texttt{add(a,b,-c)} \\
+            $x_a-x_b\le c$ & $x_a\le x_b+c$ & \texttt{add(b,a,c)} \\
+            $x_a=x_b$ & $x_a\le x_b$ ， $x_b\le x_a$ & \texttt{add(a,b,0),add(b,a,0)} \\
+            \hline
+        \end{tabular}
+    \end{center}
+    之后对整张图跑 \textbf{最短路} 。
+\end{itemize}
+
+设 $dist[0]=0$ ，若存在负环 $/$ 正环，则不等式无解，否则 $x_i=dist[i]$ 是该差分约束系统的一组解 。
+
+最坏情况下（存在负环 $/$ 正环）复杂度为 $O(nm)$ 。
+
+\textbf{注意：整个图不一定是联通的！} 

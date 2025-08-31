@@ -1,0 +1,16 @@
+路径加/单点求和\&子树求和： 设 $a[u]$ 为子树内 $d[u]$ 之和，则
+
+\begin{enumerate}
+    \item 路径加：$d[u]+w$, $d[v]+w$, $d[lca(u,v)]-w d[fa[lca(u,v)]]-w$
+    \item 单点求和：$a[u]=sumd(u)$
+    \item 子树求和：$suma=\sum_v d[v]*(dep[v]-dep[u]+1)$，树状数组维护2系数即可
+\end{enumerate}
+
+
+单点加\&子树加/路径求和： 设 $g[u]$ 表示 $1$ 到 $u$ 权值之和，则
+
+\begin{enumerate}
+    \item 单点加：子树 $d$ 加
+    \item 子树加 ：$u$ 每个子树内 $v$ 有 $g[v] += w*(dep[v]-dep[u]+1)$ 则维护系数加即可
+    \item 路径和：$sum(u,v)=g[u]+g[v]-g[lca(u,v)]-g[fa[lca(u,v)]]$
+\end{enumerate}

@@ -3,7 +3,7 @@
 \begin{minted}{cpp}
 int qhea[Maxq],qver[Maxq],qnex[Maxq],qid[Maxq];
 inline void addq(int x,int y,int d)
-    { qver[++qtot]=y,qnex[qtot]=qhea[x],qhea[x]=qtot,qid[qtot]=d; }
+    { qver[++qtot]=y, qnex[qtot]=qhea[x], qhea[x]=qtot, qid[qtot]=d; }
 void dfs(int x,int Last_node)
 {
     vis[x]=true;

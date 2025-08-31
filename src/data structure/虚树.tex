@@ -14,11 +14,11 @@ inline void build(int s)
         if(l!=sta[tp])
         {
             while(dfn[l]<dfn[sta[tp-1]])
-                add(sta[tp-1],sta[tp],dist(sta[tp]-sta[tp-1])),tp--;
+                add(sta[tp-1],sta[tp],dist(sta[tp]-sta[tp-1])), tp--;
             if(sta[tp-1]==l)
                 add(l,sta[tp],dist(sta[tp]-l)),tp--;
             else
-                hea[l]=0,add(l,sta[tp],dist(sta[tp]-l)),sta[tp]=l;
+                hea[l]=0, add(l,sta[tp],dist(sta[tp]-l)), sta[tp]=l;
         }
         hea[dot[i]]=0,sta[++tp]=dot[i];
     }

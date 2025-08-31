@@ -11,8 +11,8 @@ struct Dinic_cost
     inline void init() { tot=1,memset(hea,0,sizeof(hea)); }
     inline void add_edge(int x,int y,ll d,ll c)
 	 {
-        ver[++tot]=y,nex[tot]=hea[x],hea[x]=tot,edg[tot]=d,Cost[tot]=c;
-        ver[++tot]=x,nex[tot]=hea[y],hea[y]=tot,edg[tot]=0,Cost[tot]=-c;
+        ver[++tot]=y, nex[tot]=hea[x], hea[x]=tot, edg[tot]=d, Cost[tot]=c;
+        ver[++tot]=x, nex[tot]=hea[y], hea[y]=tot, edg[tot]=0, Cost[tot]=-c;
     }
     inline bool spfa(int s,int t)
     {
@@ -43,7 +43,7 @@ struct Dinic_cost
             {
                 if(!(tmp = dfs(ver[i],min(edg[i],rest),t)))
                     dis[ver[i]]=infll;
-                sumcost+=Cost[i]*tmp,edg[i]-=tmp,edg[i^1]+=tmp,rest-=tmp;
+                sumcost+=Cost[i]*tmp, edg[i]-=tmp, edg[i^1]+=tmp, rest-=tmp;
             }
         }
         inq[x]=false;

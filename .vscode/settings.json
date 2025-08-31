@@ -1,6 +1,51 @@
 {
+    "latex-workshop.latex.recipe.default": "xelatex",
+    "latex-workshop.latex.autoBuild.run": "never",
+    "editor.wordWrap": "on",
+    "latex-workshop.view.pdf.invertMode.enabled": "auto",
+    "latex-workshop.view.pdf.invert": 0.9,
     "files.associations": {
         "chrono": "cpp",
         "numbers": "cpp"
-    }
+    },
+    // 设置默认的编译配方为 latexmk（它会自动处理多文件编译和参考文献）
+	"latex-workshop.latex.recipes": [
+		{
+			"name": "latexmk",
+			"tools": ["latexmk"]
+		},
+		{
+			"name": "xelatex",
+			"tools": ["xelatex"]
+		}
+	],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=%OUTDIR%",
+                "%DOC%"
+                ]
+		}
+    ],
+	// 设置内置查看器的查看方式，在标签页中打开
+	"latex-workshop.view.pdf.viewer": "tab",
+	// 自动清理编译失败后的临时文件
+	"latex-workshop.latex.autoClean.run": "onFailed",
 }

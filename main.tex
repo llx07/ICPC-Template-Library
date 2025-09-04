@@ -123,6 +123,8 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \input{src/graph/euler-path.tex}
         \subsection{同余最短路}
         \input{src/graph/同余最短路.tex}
+        \subsection{树的计数}
+        \input{src/graph/树的计数.tex}
         % \subsection{双极定向}
         % \subsection{斯坦纳树}
         % \subsubsection{最小割树}
@@ -152,8 +154,6 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \input{src/data structure/seg-beats.tex}
         \subsection{树分治（点分治）}
         \input{src/data structure/tree-divide.tex}
-        \subsection{树的计数}
-        \input{src/graph/树的计数.tex}
         % 树分块。
         % 树状数组上二分。
         % ETT 。
@@ -221,6 +221,8 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \newpage
 
         \section{数论}
+        \subsection{类欧几里得}
+        \input{src/number theory/euclid.tex}
         \subsection{中国剩余定理}
         \input{src/number theory/crt.tex}
         \subsection{扩展中国剩余定理}
@@ -237,6 +239,8 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \input{src/number theory/du.tex}
         \subsection{Min-25筛}
         \input{src/number theory/min25.tex}
+        \subsection{没有精度问题的整除(?)}
+        \inputminted{cpp}{src/number theory/div.cpp}
         \newpage
 
         \section{计算几何}
@@ -256,15 +260,6 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \inputminted{cpp}{src/geometry/polygon.cpp}
         \subsection{半平面交}
         \inputminted{cpp}{src/geometry/half-plane.cpp}
-        \newpage
-
-        \section{杂项}
-        \subsection{生成树计数}
-        \input{src/else/tree-count.tex}
-        \subsection{类欧几里得}
-        \input{src/else/euclid.tex}
-        \subsection{没有精度问题的整除}
-        \inputminted{cpp}{src/else/div.cpp}
         \newpage
 
         \section{其它工具}

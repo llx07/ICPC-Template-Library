@@ -1,3 +1,39 @@
-欧拉图的判定：考虑起点、终点与中间点的必要条件即可。可以证明必要条件也是充分的。
-以下给出已确定起点的无向图欧拉路径（回路）的构造算法。
-\inputminted{cpp}{src/graph/euler-path.cpp}
+\subsubsection{有向图}
+\begin{minted}[highlightlines={7,9}]{cpp}
+vector<int> G[N];
+int cur[N];
+void dfs(int u){
+    for(int& i=cur[u];i<G[u].size();){ 
+        i++; // 提前加 i
+        dfs(G[u][i-1]); 
+        // 在这里往栈中加入边 (u -> G[u][i-1])
+    }
+    // 在这里往栈中加入点 u
+    ans.push(u);
+}    
+\end{minted}
+\subsubsection{无向图}
+\begin{minted}[highlightlines={19,21}]{cpp}
+struct Edge{
+    int to,rev; // 终点,反向边编号
+    bool exist;
+};
+vector<Edge> G[N];
+int cur[N];
+stack<int> ans;
+void add_edge(int u,int v){
+    G[u].push_back(Edge{v,(int)G[v].size(),true});
+    if(u!=v)G[v].push_back(Edge{u,(int)G[u].size()-1,true});
+}
+void dfs(int u){
+    for(int& i=cur[u];i<G[u].size();){
+        i++;
+        if(!G[u][i-1].exist)continue;
+        G[u][i-1].exist = 0;
+        G[G[u][i-1].to][G[u][i-1].rev].exist=0;
+        dfs(G[u][i-1].to);
+        // 在这里加入边 (u->G[u][i-1].to)
+    }
+    // 在这里加入节点 u
+}
+\end{minted}

@@ -1,4 +1,7 @@
-from itertools import * # itertools库
+\paragraph*{itertools 库}
+
+\begin{minted}[]{python3}
+from itertools import *
 # 笛卡尔积
 product('ABCD', 'xy') # Ax Ay Bx By Cx Cy Dx Dy
 product(range(2), repeat=3) # 000 001 010 011 100 101 110 111
@@ -8,9 +11,11 @@ permutations('ABCD', 2) # AB AC AD BA BC BD CA CB CD DA DB DC
 combinations('ABCD', 2) # AB AC AD BC BD CD
 # 有重复的组合
 combinations_with_replacement('ABC', 2) # AA AB AC BB BC CC
+\end{minted}
 
-
-from random import * # random 库
+\paragraph*{random 库}
+\begin{minted}[]{python3}
+from random import * 
 randint(l, r) # 在 [l, r] 内的随机整数
 choice([1, 2, 3, 5, 8]) # 随机选择序列中一个元素
 sample([1, 2, 3, 4, 5], k=2) # 随机抽样两个元素
@@ -18,7 +23,10 @@ shuffle(x) # 原地打乱序列 x
 l,r = sorted(choices(range(1, N+1), k=2)) # 生成随机区间 [l,r]
 binomialvariate(n, p) # 返回服从 B(n,p) 的一个变量
 normalvariate(mu, sigma) # 返回服从 N(mu,sigma) 的一个变量
+\end{minted}
 
+\paragraph*{列表操作}
+\begin{minted}[]{python3}
 # 列表操作
 l = sample(range(100000), 10)
 l.sort() # 原地排序
@@ -27,12 +35,31 @@ from functools import cmp_to_key
 l.sort(key=cmp_to_key(lambda x,y:y-x)) # 比较函数，小于返回负数
 sorted(l) # 非原地排序
 l.reverse() reversed(l)
+\end{minted}
+\paragraph*{字典操作}
+\begin{minted}[]{python3}
+from collections import defaultdict
+# 提供一个函数返回缺省值
+d = defaultdict(list)
+d["a"].append(2)
+d["a"].append(3)
+d["b"].append(4)
+print(d) # {'a': [2, 3], 'b': [4]}
+# 用 lambda 可以快速构造出需要的默认值
+d = defaultdict(lambda: 2)
+# 遍历键值对
+for k,v in d.items():
+    print(k, v)
+\end{minted}
 
-# 复数
+\paragraph*{复数}
+\begin{minted}[]{python3}
 a = 1+2j
 print(a.real, a.imag, abs(a), a.conjugate())
+\end{minted}
 
-# 高精度小数
+\paragraph*{高精度小数}
+\begin{minted}[]{python3}
 from decimal import Decimal, getcontext, FloatOperation, ROUND_HALF_EVEN
 getcontext().prec = 100 # 设置有效位数
 getcontext().rounding = getattr(ROUND_HALF_EVEN) # 四舍六入五成双
@@ -40,3 +67,16 @@ getcontext().traps[FloatOperation] = True # 禁止 float 混合运算
 a = Decimal("114514.1919810")
 print(a, f"{a:.2f}")
 a.ln() a.log10() a.sqrt() a**2
+\end{minted}
+
+
+\paragraph*{记忆化搜索}
+\begin{minted}[]{python3}
+from functools import cache
+# 记忆化搜索，还可以记忆化元组，只要参数满足 Hashable 即可
+@cache 
+def fib(n):
+    if n<=2:
+        return 1
+    return fib(n-1)+fib(n-2)
+\end{minted}

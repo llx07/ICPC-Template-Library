@@ -24,7 +24,7 @@ void tarjan(int x,int Last)
     {
         if(!dfn[ver[i]])
         {
-            tarjan(ver[i],i),low[x]=min(low[x],low[ver[i]]);
+            tarjan(ver[i],i), low[x]=min(low[x],low[ver[i]]);
             if(low[ver[i]]>dfn[x]) edg[i]=edg[i^1]=true;
         }
         else if(dfn[ver[i]]<dfn[x] && i!=(Last^1)) low[x]=min(low[x],dfn[ver[i]]);
@@ -48,7 +48,7 @@ void tarjan(int u)
             if(low[v]==dfn[u])
             {
                 int hav=0; ++All;
-                for(int x=0;x!=v;tp--) x=sta[tp],T[x].pb(All),T[All].pb(x),hav++;
+                for(int x=0;x!=v;tp--) x=sta[tp], T[x].pb(All), T[All].pb(x), hav++;
                 T[u].pb(All),T[All].pb(u);
                 siz[All]=++hav;
             }

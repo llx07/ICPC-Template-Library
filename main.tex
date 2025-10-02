@@ -99,10 +99,12 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \section{图论}
         \subsection{Tarjan 边双、点双（圆方树）}
         \input{src/graph/tarjan.tex}
-        \subsection{O(1) LCA}
+        \subsection{离线 O(1) LCA (Tarjan)}
         \input{src/graph/o1lca.tex}
 
-        % 在线 O(1) LCA ？
+        \subsection{在线 O(1) LCA (DFS 序)} 
+        \input{src/graph/o1lca_st_dfn.tex}
+
 
         \subsection{某些路径问题单log做法}
         \input{src/graph/某些路径问题单log做法.tex}

@@ -1,23 +1,40 @@
-const int mod = 998244353, G = 3, iG = 332748118;
-int tr[N], lim;
-void adjust(int n) { // n: 多项式的次数。
-    lim = 1;
-    while (lim <= n) lim <<= 1;
-    for (int i = 0; i < lim; i++) tr[i] = (tr[i >> 1] >> 1) | ((i & 1) ? lim >> 1 : 0);
-} // 准备蝶形变换。
-void ntt(int *f, int op) { // op: 1 为 dft ，-1 为 idft 。
-    for (int i = 0; i < lim; i++) if (tr[i] < i) swap(f[tr[i]], f[i]);
-    for (int l = 1; l < lim; l <<= 1) {
-        int w1 = qpow(op == 1 ? G : iG, (mod - 1) / (l << 1)); // qpow: 快速幂。
-        for (int i = 0; i < lim; i += l << 1) {
-            for (int j = i, w = 1; j < i + l; j++, (w *= w1) %= mod) {
-                int x = f[j], y = f[j + l] * w % mod;
-                f[j] = (x + y) % mod, f[j + l] = (x - y) % mod;
+vector<int> omega[25];
+// n 是 DFT 的最大长度，如果有 2 个长为 m 的多项式相乘，n 需要 >=2m
+void ntt_init(int n){
+    for(int k=2,d=0;k<=n;k*=2,d++){
+        omega[d].resize(k+1);
+        int wn=qpow(3,(p-1)/k),tmp=1;
+        for(int i=0;i<=k;i++){
+            omega[d][i]=tmp;
+            tmp=(LL)tmp*wn%p;
+        }
+    }
+}
+// 传入的必须在 [0,p) 范围内，不能有负的
+// 否则要把 d==16 改成 d%8==0 之类，多取几次模
+void ntt(int *c,int n,int tp){
+    static ULL a[N];
+    for(int i=0;i<n;i++)a[i]=c[i];
+    for(int i=1,j=0;i<n-1;i++){
+        int k=n;
+        do j^=(k>>=1); while(j<k);
+        if(i<j)swap(a[i],a[j]);
+    }
+
+    for(int k=1,d=0;k<n;k*=2,d++){
+        if(d==16)for(int i=0;i<n;i++)a[i]%=p;
+        for(int i=0;i<n;i+=k*2){
+            for(int j=0;j<k;j++){
+                int w = omega[d][tp>0 ? j : k*2-j];
+                ULL u = a[i+j],  v = w*a[i+j+k]%p;
+                a[i+j]=u+v;
+                a[i+j+k]=u-v+p;
             }
         }
     }
-    if (op == -1) {
-        int iv = qpow(lim); // 算逆元。
-        for (int i = 0; i < lim; i++) (f[i] *= iv) %= mod;
+    if(tp>0){for(int i=0;i<n;i++)c[i]=a[i]%p;}
+    else{
+        int inv = qpow(n, p-2);
+        for(int i=0;i<n;i++)c[i]=a[i]*inv%p;
     }
 }

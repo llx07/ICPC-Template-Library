@@ -1,8 +1,10 @@
 \begin{itemize}
+    \item 检查身份证件:护照、学生证、胸牌以及现场所需通行证。
+    \item 确认什么东西能带进场。特别注意:手机、智能手表、金属（钥匙）等等。
+    \item 测试鼠标、键盘、显示器和座椅。如果有问题,立刻联系工作人员。
     \item 测试编译器版本。
     \begin{itemize}
         \item  \texttt{\#include<bits/stdc++.h>}
-        \item  \texttt{pb\_ds}
         \item  C++20: \texttt{cin>>(s+1);}
         \item  C++17: \texttt{auto [x,y]=pair{1,"abc"};}
         \item  C++11: \texttt{auto x=1;}
@@ -10,8 +12,22 @@
     \item 测试 \_\_int128, \_\_float128, long double
     \item 测试 pragma 是否 CE 。
     \item 测试 ‐fsanitize=address,undefined
-    \item 测试本地性能
-        % TODO 测试性能代码
+    \item 测试本地性能与提交性能
+        \begin{minted}{cpp}
+        const int N=1<<20;
+        for(int T=4;T;T--){
+            int a[N],b[N],c[N];
+            for(int i=0;i<N;i++)a[i]=i,b[i]=N-i;
+            ntt_init(N);ntt(a,N,1);ntt(b,N,1);
+            for(int i=0;i<N;i++)c[i]=a[i]*b[i]; // 注意不要取模谢谢
+            ntt(c,N,-1);
+            assert(c[0]==0xad223d);
+        }
+        // 本地： 291 ms
+        // QOJ: 340+-40 ms
+        // CF: 1000+-100 ms
+        \end{minted}
+    \item 测试 \verb|make| 命令。
 \end{itemize}
 
 

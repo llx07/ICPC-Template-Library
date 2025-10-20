@@ -34,5 +34,5 @@ P operator*(cp b, const LD &a) { return P(a * b.x, a * b.y); }
 P operator/(cp b, const LD &a) { return P(b.x / a, b.y / a); }
 LD operator*(cp a, cp b) { return a.x * b.x + a.y * b.y; }                                                             // 点积
 LD operator^(cp a, cp b) { return a.x * b.y - a.y * b.x; }                                                             // 叉积
-LD rad(cp a, cp b) { return acosl((a.x == 0 && a.y == 0 || b.x == 0 && b.y == 0) ? 0 : (a * b / a.len() / b.len())); } // 夹角
+LD rad(cp a, cp b) { return acosl((a.x == 0 && a.y == 0 || b.x == 0 && b.y == 0) ? 0 : (a * b / a.len() / b.len())); } // 夹角 其中有零向量时返回0
 bool left(cp a, cp b) { return sgn(a ^ b) > 0; }                                                                       // 没什么用

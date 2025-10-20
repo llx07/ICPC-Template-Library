@@ -8,7 +8,7 @@ struct C {
         c = (a + b) / 2;
         r = (a - c).len();
     }
-    C(cp x, cp y, cp z) {
+    C(cp x, cp y, cp z) { // 注意三点共线
         P p(y - x), q(z - x);
         P s(p * p / 2, q * q / 2);
         LD d = p ^ q;

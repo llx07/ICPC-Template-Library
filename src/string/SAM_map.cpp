@@ -2,7 +2,6 @@ struct SAM{ // 注意修改字符集！字符集是小写字母吗？
     int last = 1, tot = 1;
     map<int,int> ch[N<<1];
     int len[N<<1], f[N<<1];
-    vector<int> G[N<<1];
     void ins(char c){
         c -= 'a';
         int p = last, cur = last = ++tot;

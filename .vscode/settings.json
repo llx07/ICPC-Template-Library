@@ -5,8 +5,14 @@
     "latex-workshop.view.pdf.invertMode.enabled": "auto",
     "latex-workshop.view.pdf.invert": 0.9,
     "files.associations": {
+        "out": "plaintext",
         "chrono": "cpp",
-        "numbers": "cpp"
+        "numbers": "cpp",
+        "string": "cpp",
+        "format": "cpp",
+        "random": "cpp",
+        "limits": "cpp",
+        "valarray": "cpp"
     },
     // 设置默认的编译配方为 latexmk（它会自动处理多文件编译和参考文献）
 	"latex-workshop.latex.recipes": [

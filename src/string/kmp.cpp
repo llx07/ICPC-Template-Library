@@ -1,23 +1,11 @@
-char s[N], t[N];
-int nex[N], n, m;
-
-void kmp() {
-    int j = 0;
-    for (int i = 2; i <= n; i++) {
-        while (j && s[j + 1] != s[i]) j = nex[j];
-        if (s[j + 1] == s[i]) j++;
-        nex[i] = j;
-    }
+for(int i=2,j=0;i<=m;i++){
+    while(j && t[j+1]!=t[i])j=nxt[j];
+    if(t[j+1]==t[i])j++;
+    nxt[i]=j;
 }
 
-void match() {
-    int j = 0;
-    for (int i = 1; i <= m; i++) {
-        while (j && s[j + 1] != t[i]) j = nex[j];
-        if (s[j + 1] == t[i]) j++;
-        if (j == n) {
-            //match.
-            j = nex[j];
-        }
-    }
+for(int i=1,j=0;i<=n;i++){
+    while(j && t[j+1]!=s[i])j=nxt[j];
+    if(t[j+1] == s[i])j++;
+    if(j==m)cout<<i-m+1<<'\n';
 }

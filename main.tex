@@ -218,6 +218,8 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \section{多项式}
         \subsection{O(nV)多重背包（单调队列优化）}
         \inputminted{cpp}{src/poly/multi-packs.cpp}
+        \subsection{二项式反演}
+        \input{src/poly/exsfy.tex}
         \subsection{FFT}
         \inputminted{cpp}{src/poly/fft.cpp}
         \subsection{NTT}
@@ -252,7 +254,7 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \input{src/number theory/du.tex}
         \subsection{Min-25筛}
         \input{src/number theory/min25.tex}
-        \subsection{没有精度问题的整除(?)}
+        \subsection{没有精度问题的整除}
         Remark: y<0 需将 x,y 都取反才能得到期望结果。
         \inputminted{cpp}{src/number theory/div.cpp}
 
@@ -294,7 +296,7 @@ rtopsep=0pt,parsep=\parskip,topsep=0pt}
         \subsection{试机赛}
         \input{src/tools/test_environment.tex}
         \subsection{Bashrc}
-        用 \verb|code ~/.bashrc| 编辑，然后把终端关了再开就能生效。
+        用 \verb|code ~/.bashrc| 编辑。
         \inputminted{bash}{src/tools/bashrc.sh}
         % \subsubsection{linux}
         % \inputminted{cpp}{src/tools/linux_checker.cpp}

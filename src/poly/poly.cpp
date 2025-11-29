@@ -70,7 +70,7 @@ void inverse(int *f, int *g, int n){
   for(int i=0; i<lim; i++)
     f[i]=f[i]*(2-f[i]*t[i] % mod) % mod;
   ntt(f, -1), erase(f, n+1, lim-1), clear(t, lim-1);
-} // 计算 g 的 n 次逆，存放在 f 中，g 不变。不要让 f 和 g 为同一个数组。
+} // 计算 g 的 n 次逆，存放在 f 中，g 不变。不要让 f 和 g 为同一个数组，要求f都是0。
 void ln(int *f, int *g, int n){
   static int t[N];
   copy(t, g, n), inverse(f, g, n), dif(t, n);

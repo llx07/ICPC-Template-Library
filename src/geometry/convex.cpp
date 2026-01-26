@@ -1,5 +1,5 @@
 vp convex(vp p) {
-    if (p.size() < 2) return p];
+    if (p.size() < 2) return p;
     sort(p.begin(), p.end());
     int n = p.size(), cnt = 0;
     vp con({p[0]});

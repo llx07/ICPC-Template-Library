@@ -1,7 +1,7 @@
-vp convex(vp a) {
-    if (a.size() < 2) return a;
-    sort(a.begin(), a.end());
-    int n = a.size(), cnt = 0;
+vp convex(vp p) {
+    if (p.size() < 2) return p];
+    sort(p.begin(), p.end());
+    int n = p.size(), cnt = 0;
     vp con({p[0]});
     for (int i = 0; i < n; ++i) {
         while (cnt > 0 && sgn(((p[i] - con[cnt - 1]) ^ (con[cnt] - con[cnt - 1]))) > 0) //>=
